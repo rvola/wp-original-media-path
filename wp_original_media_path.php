@@ -2,9 +2,9 @@
 /*
 Plugin Name: WP Original Media Path
 Description: Restore the fields to change the url and file upload
-Version: 1.0.0
-Date : 27/12/2012
-Author: studio RVOLA
+Version: 1.0.1
+Date : 06/01/2013
+Author: RVOLA
 Author URI: http://rvola.com
 License: GPLv2 or later
 */
@@ -27,8 +27,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 function rwp_omp_activation() {
 	if (get_option('upload_path') == '' || get_option('upload_url_path') == '') {
-		update_option('upload_url_path','SUBDOMAIN FOR MEDIA',true);
-		update_option('upload_path','PATH FOR DOSSIER',true);
+		update_option('upload_url_path','DOMAIN OR SUBDOMAIN FOR MEDIA',true);
+		update_option('upload_path','PATH FOR UPLOAD FOLDER',true);
 		wp_redirect(admin_url('options-media.php'));exit();
 	}
 }
