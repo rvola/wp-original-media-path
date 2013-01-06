@@ -1,5 +1,5 @@
 === WP Original Media Path ===
-Contributors: NicoR-1, NicoR, RVOLA
+Contributors: NicoR, rvola
 Tags: media, upload, path, subdomain, 3.5
 Requires at least: 3.5
 Tested up to: 3.5
