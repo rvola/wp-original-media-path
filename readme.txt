@@ -1,8 +1,9 @@
 === WP Original Media Path ===
+Contributors: NicoR-1, NicoR, RVOLA
 Tags: media, upload, path, subdomain, 3.5
 Requires at least: 3.5
 Tested up to: 3.5
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 Restore the fields to change the url and file upload
@@ -25,6 +26,10 @@ Well, it's done!
 You can disable the plugin and delete it, it will do nothing more in time.
 
 == Changelog ==
+
+= 1.0.1. =
+* Contributors list
+* Text fields
 
 = 1.0.0. =
 * Launch Plugin
