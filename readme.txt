@@ -3,7 +3,7 @@ Contributors: rvola, NicoR
 Tags: media, upload, path, subdomain, 3.5
 Requires at least: 3.5
 Tested up to: 3.5.2
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
