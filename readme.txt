@@ -2,8 +2,8 @@
 Contributors: rvola, NicoR
 Tags: media, upload, path, subdomain, 3.5
 Requires at least: 3.5
-Tested up to: 3.5.2
-Stable tag: 1.1.0
+Tested up to: 3.6-beta2
+Stable tag: 1.2.0
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
@@ -37,10 +37,15 @@ Une fois terminé, vous pouvez désactiver le plug-in et le retirer. Il fonction
 * C'est fini!
 
 == Frequently Asked Questions ==
+= How to set my plugin? = 
+The first is your file uploads without the domain.
+For example, if your upload folder is at the root of the site and it is called 'my-images' the first field must be filled 'my-images'
+
+The second field is the full URL to the file uploads.
+In the previous example, the field looks like this: 'http://www.siteweb.com/my-images'
 
 = How to completely uninstall the plugin? =
-1. Disable the plugin if it is active
-2. Delete the contents of the fields on the page "Setting Media" 'Store uploaded files in this folder' and 'full web address for the files'
+1. Disable the plugin
 
 = My site is broken =
 * Do not panic!
@@ -49,9 +54,15 @@ Une fois terminé, vous pouvez désactiver le plug-in et le retirer. Il fonction
 
 ____________
 
+= Comment configurer mon plugin ? =
+Le premier correspond à votre dossier d'uploads sans le domaine.
+Par exemple si votre dossier d'upload se trouve à la racine du site et qu'il se nomme 'mes-images' le premier champ dois être remplis 'mes-images'
+
+Le deuxième champ représente l'URL complète vers le dossier d'uploads.
+Dans l'exemple précédent, le champ ressemble à ceci : 'http://www.siteweb.com/mes-images'
+
 = Comment désinstaller complètement le plugin? =
-1. Désactiver le plugin s’il est actif
-2. Effacer le contenu des champs de la page "Réglages des médias" :  'Stocker les fichiers envoyés dans ce dossier' et 'Adresse web complète pour les fichiers'
+1. Désactiver le plugin
 
 = Mon site est cassé =
 * Ne paniquez pas!
@@ -59,6 +70,11 @@ ____________
 * Vous pouvez toujours suivre la procédure de désinstallation si vous souhaitez revenir à l'origine
 
 == Changelog ==
+
+= 1.2.0 =
+* Bug link setting
+* uninstalling the plugin with the deactivation
+* Update FAQ
 
 = 1.1.0 =
 * FAQ
