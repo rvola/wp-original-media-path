@@ -55,7 +55,7 @@ Your old settings WP Original Media Path will be deleted.
 * Refer to the help for configuring media fields.
 * You can always follow the uninstallation procedure if you want to reverse
 
-____________
+=########################=
 
 = Comment configurer mon plugin ? =
 Le premier correspond à votre dossier d'uploads sans le domaine.
