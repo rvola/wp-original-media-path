@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Original Media Path - 1.3.0\n"
 "POT-Creation-Date: 2013-07-18 11:03+0100\n"
-"PO-Revision-Date: 2013-07-18 11:07+0100\n"
+"PO-Revision-Date: 2013-07-18 11:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: studio RVOLA <hello@rvola.com>\n"
 "Language: fr_FR\n"
@@ -17,63 +17,51 @@ msgstr ""
 "X-Poedit-SearchPath-0: /Volumes/OSX Mountain Lion/Users/rvola/Sites/"
 "wordpress/wp-content/plugins/wp-original-media-path\n"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wp_original_media_path.php:51
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:72
+#: wp-original-media-path/wp_original_media_path.php:51
+#: wp-original-media-path/wpomp-admin.php:72
 msgid "Settings"
 msgstr "Réglages"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:43
+#: wp-original-media-path/wpomp-admin.php:43
 msgid "Settings saved."
 msgstr "Réglages enregistrés."
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:46
+#: wp-original-media-path/wpomp-admin.php:46
 msgid "Uninstall completed."
 msgstr "Désinstallation terminée."
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:46
+#: wp-original-media-path/wpomp-admin.php:46
 msgid "Click here now to disable the plugin"
 msgstr "Cliquez ici maintenant pour désactiver le plugin"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:59
+#: wp-original-media-path/wpomp-admin.php:59
 msgid "Uninstall"
 msgstr "Désinstaller"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:61
+#: wp-original-media-path/wpomp-admin.php:61
 msgid "Click to delete the settings and disable the plugin"
 msgstr "Cliquez pour supprimer les réglages et désactiver le plugin"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:64
+#: wp-original-media-path/wpomp-admin.php:64
 msgid "Uninstall now"
 msgstr "Désinstaller maintenant"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:78
+#: wp-original-media-path/wpomp-admin.php:78
 msgid "Store uploads in this folder"
 msgstr "Stocker les fichiers envoyés dans ce dossier"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:82
+#: wp-original-media-path/wpomp-admin.php:82
 msgid "Default is <code>wp-content/uploads</code>"
 msgstr "Par défaut, <code>wp-content/uploads</code>"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:87
+#: wp-original-media-path/wpomp-admin.php:87
 msgid "Full URL path to files"
 msgstr "Adresse web complète pour les fichiers"
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:91
+#: wp-original-media-path/wpomp-admin.php:91
 msgid "Configuring this is optional. By default, it should be blank."
 msgstr "Ce réglage est facultatif. Par défaut, ce champ devrait être vide."
 
-#: /Volumes/OSX Mountain
-#: Lion/Users/rvola/Sites/wordpress/wp-content/plugins/wp-original-media-path/wpomp-admin.php:97
+#: wp-original-media-path/wpomp-admin.php:97
 msgid "Update"
 msgstr "Mettre à jour"
