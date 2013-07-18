@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Original Media Path - 1.3.0\n"
 "POT-Creation-Date: 2013-07-18 11:03+0100\n"
-"PO-Revision-Date: 2013-07-18 11:08+0100\n"
+"PO-Revision-Date: 2013-07-18 11:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: studio RVOLA <hello@rvola.com>\n"
 "Language: fr_FR\n"
@@ -14,65 +14,51 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2;plural=n>2;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: /Volumes/OSX Mountain Lion/Users/rvola/Sites/"
-"wordpress/wp-content/plugins/wp-original-media-path\n"
-
 
 #: wp-original-media-path/wp_original_media_path.php:51
 #: wp-original-media-path/wpomp-admin.php:72
 msgid "Settings"
 msgstr ""
 
-
 #: wp-original-media-path/wpomp-admin.php:43
 msgid "Settings saved."
 msgstr ""
-
 
 #: wp-original-media-path/wpomp-admin.php:46
 msgid "Uninstall completed."
 msgstr ""
 
-
 #: wp-original-media-path/wpomp-admin.php:46
 msgid "Click here now to disable the plugin"
 msgstr ""
-
 
 #: wp-original-media-path/wpomp-admin.php:59
 msgid "Uninstall"
 msgstr ""
 
-
 #: wp-original-media-path/wpomp-admin.php:61
 msgid "Click to delete the settings and disable the plugin"
 msgstr ""
-
 
 #: wp-original-media-path/wpomp-admin.php:64
 msgid "Uninstall now"
 msgstr ""
 
-
 #: wp-original-media-path/wpomp-admin.php:78
 msgid "Store uploads in this folder"
 msgstr ""
-
 
 #: wp-original-media-path/wpomp-admin.php:82
 msgid "Default is <code>wp-content/uploads</code>"
 msgstr ""
 
-
 #: wp-original-media-path/wpomp-admin.php:87
 msgid "Full URL path to files"
 msgstr ""
 
-
 #: wp-original-media-path/wpomp-admin.php:91
 msgid "Configuring this is optional. By default, it should be blank."
 msgstr ""
-
 
 #: wp-original-media-path/wpomp-admin.php:97
 msgid "Update"
