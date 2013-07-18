@@ -1,10 +1,11 @@
 <?php
 /*
 Plugin Name: WP Original Media Path
-Description: Restore the fields to change the url and file upload
-Version: 1.2.0
+Plugin URI: http://wordpress.org/plugins/wp-original-media-path/
+Description: Restore the fields to change the url and file upload. | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a>
+Version: 1.3.0
 Date : 06/01/2013
-Revision : 01/05/2013
+Revision : 18/07/2013
 Author: RVOLA
 Author URI: http://rvola.com
 License: GPLv2 or later
@@ -26,6 +27,10 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
+/*Define*/
+define( "WPOMP_NAME", 'WP Original Media Path');
+
+/*Activation*/
 function wpomp_activation() {
 	if (get_option('upload_path') == '' || get_option('upload_url_path') == '') {
 		update_option('upload_path', 'wp-content/uploads', true);
@@ -34,17 +39,25 @@ function wpomp_activation() {
 }
 register_activation_hook( __FILE__, 'wpomp_activation');
 
-function wpomp_desactivation() {
-	update_option('upload_path', '', true);
-	update_option('upload_url_path', '', true);
-}
-register_deactivation_hook( __FILE__, 'wpomp_desactivation');
 
+/*Translate*/
+load_plugin_textdomain( 'wpomp', false, dirname(plugin_basename(__FILE__)).'/lang/'); 
+
+/*Link Settings in plugins lists*/
 function wpomp_settings_link($links, $file) { 
 	if ( $file == plugin_basename(dirname(__FILE__)).'/wp_original_media_path.php' ) {
-	   $settings_link = '<a href="'.admin_url('options-media.php').'">'.__('Settings').'</a>'; 
+	   $settings_link = '<a href="'.admin_url('options-general.php?page=wpomp-settings').'">'.__('Settings').'</a>'; 
 	   array_unshift($links, $settings_link); 
 	}
 	return $links; 
 }
 add_filter("plugin_action_links", 'wpomp_settings_link', 10, 2 );
+
+/*Link Submenu Page*/
+function wpomp_settings_subpage() {
+	add_submenu_page( 'options-general.php', WPOMP_NAME, WPOMP_NAME, 'manage_options', 'wpomp-settings', 'wpomp_settings_options' ); 
+}
+add_action('admin_menu', 'wpomp_settings_subpage');
+
+/*Include admin page*/
+include_once('wpomp-admin.php');
