@@ -1,8 +1,8 @@
 === WP Original Media Path ===
-Contributors: rvola, NicoR
+Contributors: rvola
 Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7
 Requires at least: 3.5
-Tested up to: 3.7
+Tested up to: 3.7.1
 Stable tag: 1.3.0
 License: GPLv2 or later
 
