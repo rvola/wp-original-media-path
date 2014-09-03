@@ -1,35 +1,35 @@
 === WP Original Media Path ===
 Contributors: rvola
-Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9
+Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0
 Requires at least: 3.5
-Tested up to: 3.9.1
-Stable tag: 1.3.0
+Tested up to: 4.0
+Stable tag: 1.4.0
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
 
 == Description ==
 = [EN] =
-The new version of Wordpress 3.9, 3.8, 3.7, 3.6 and 3.5 has changed the media page, removing the two fields to define the location and the sub-field of media.
+The new version of Wordpress 4.0, 3.9, 3.8, 3.7, 3.6 and 3.5 has changed the media page, removing the two fields to define the location and the sub-field of media.
 There exists a constant wp-config.php, but it does not include sub-domains.
 This plug-in is designed for installations virgin WordPress.
 Once activated, the plugin will add two values ​​in the database, you modify later.
 
 = [FR] =
-La nouvelle version de Wordpress 3.9, 3.8, 3.7, 3.6 et 3.5 a changé la page des médias, en supprimant les deux champs permettant de définir l'emplacement et le sous-champ des médias.
+La nouvelle version de Wordpress 4.0, 3.9, 3.8, 3.7, 3.6 et 3.5 a changé la page des médias, en supprimant les deux champs permettant de définir l'emplacement et le sous-champ des médias.
 Il y existe une constante wp-config.php, mais elle ne prend pas en compte les sous-domaines.
 Ce plug-in est conçu pour les installations vierges de WordPress.
 Une fois activé, le plugin va ajouter deux valeurs dans la base de données, vous les modifierez par la suite.
 
 == Installation ==
 = [EN] =
-* Activate the plugin installed on a new Wordpress 3.9, 3.8, 3.7, 3.6 or 3.5.
+* Activate the plugin installed on a new Wordpress 4.0, 3.9, 3.8, 3.7, 3.6 or 3.5.
 * Go to the option page of the plugin to complete the configuration
 * Modify the desired values ​​'Store uploaded files in this folder' and 'full web address for the'.
 * That's it!
 
 = [FR] =
-* Activer le plugin installé sur un nouveau Wordpress 3.9, 3.8, 3.7, 3.6 ou 3.5.
+* Activer le plugin installé sur un nouveau Wordpress 4.0, 3.9, 3.8, 3.7, 3.6 ou 3.5.
 * Rendez-vous à la page option du plugin pour terminer la configuration
 * Modifiez les valeurs souhaitées 'Stocker les fichiers envoyés dans ce dossier' et 'Adresse web complète pour les fichiers'.
 * C'est fini!
@@ -98,6 +98,13 @@ Nous sommes heureux que vous souhaitiez nous aider à améliorer le WP Original 
 Pour nous aider, rendez-vous directement dans le formulaire du plugin http://wordpress.org/support/plugin/wp-original-media-path et postez-nous vos suggestions.
 
 == Changelog ==
+
+= 1.4.0 | 03/09/2014 =
+* Correct classname responsive
+* Check compatibility WordPress 4.0
+* Update readme
+* Update assets Repository
+* Update and clean files PO & MO
 
 = 1.3.0 | 18/07/2013 =
 * Page options
