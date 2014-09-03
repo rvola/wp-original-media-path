@@ -2,13 +2,15 @@
 /*
 Plugin Name: WP Original Media Path
 Plugin URI: http://wordpress.org/plugins/wp-original-media-path/
-Description: Restore the fields to change the url and file upload. | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a>
-Version: 1.3.0
+Description: Restore the fields to change the url and file upload | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a>
+Version: 1.4.0
 Date : 06/01/2013
-Revision : 18/07/2013
+Revision : 03/09/2014
 Author: RVOLA
 Author URI: http://rvola.com
 License: GPLv2 or later
+Domain Path: /lang/
+Text Domain: wpomp
 */
 
 /*
@@ -28,7 +30,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
 /*Define*/
-define( "WPOMP_NAME", 'WP Original Media Path');
+define('WPOMP_NAME', 'WP Original Media Path');
 
 /*Activation*/
 function wpomp_activation() {
@@ -39,9 +41,8 @@ function wpomp_activation() {
 }
 register_activation_hook( __FILE__, 'wpomp_activation');
 
-
 /*Translate*/
-load_plugin_textdomain( 'wpomp', false, dirname(plugin_basename(__FILE__)).'/lang/'); 
+load_plugin_textdomain('wpomp', false, dirname(plugin_basename(__FILE__)).'/lang/'); 
 
 /*Link Settings in plugins lists*/
 function wpomp_settings_link($links, $file) { 
