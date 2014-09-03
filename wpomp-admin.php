@@ -22,21 +22,20 @@ function wpomp_settings_options() {
 	$notice_update = $notice_uninstall = false;
 	
 	/*Check form*/
-		/*New settings*/
-		if (isset($_POST['wpomp-settings']) && check_admin_referer('wpomp-settings')) {
-			update_option('upload_path', $_POST['upload_path'], true);
-			update_option('upload_url_path', $_POST['upload_url_path'], true);
-			$notice_update = true;
-		}
-		/*Uninstall*/
-		if (isset($_POST['wpomp-uninstall']) && check_admin_referer('wpomp-uninstall')) {
-			update_option('upload_path', '', true);
-			update_option('upload_url_path', '', true);
-			
-			$notice_uninstall = true;
-			$url_uninstall = wp_nonce_url(admin_url('plugins.php?action=deactivate&plugin=wp-original-media-path/wp_original_media_path.php&plugin_status=all&paged=1'),'deactivate-plugin_wp-original-media-path/wp_original_media_path.php');
-			
-		}
+	/*New settings*/
+	if (isset($_POST['wpomp-settings']) && check_admin_referer('wpomp-settings')) {
+		update_option('upload_path', $_POST['upload_path'], true);
+		update_option('upload_url_path', $_POST['upload_url_path'], true);
+		$notice_update = true;
+	}
+	/*Uninstall*/
+	if (isset($_POST['wpomp-uninstall']) && check_admin_referer('wpomp-uninstall')) {
+		update_option('upload_path', '', true);
+		update_option('upload_url_path', '', true);
+		
+		$notice_uninstall = true;
+		$url_uninstall = wp_nonce_url(admin_url('plugins.php?action=deactivate&plugin=wp-original-media-path/wp_original_media_path.php&plugin_status=all&paged=1'),'deactivate-plugin_wp-original-media-path/wp_original_media_path.php');
+	}
 		
 	/*Notice*/	
 	if ($notice_update == true) {
@@ -53,24 +52,12 @@ function wpomp_settings_options() {
 	<div class="wrap" id="wpomp-settings">
 		<div id="icon-options-general" class="icon32"><br></div>
 		<h2><?php echo WPOMP_NAME; ?></h2>
-		<div id="poststuff" class="metabox-holder has-right-sidebar">
-			<div id="side-info-column" class="inner-sidebar">
-			    <div id="linksubmitdiv" class="postbox " style="">
-			        <h3 class="hndle"><span><?php _e('Uninstall','wpomp'); ?></span></h3>
-			        <div class="inside">
-			            <p><?php _e('Click to delete the settings and disable the plugin','wpomp');?>.</p>
-			            <form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
-			            	<?php wp_nonce_field('wpomp-uninstall');?>
-			            	<input type="submit" value="<?php _e('Uninstall now','wpomp');?>" class="button" name="wpomp-uninstall"/>
-			            </form>
-			        </div>
-			    </div>
-			</div>
-			<div id="post-body">
-			    <div id="post-body-content">
-			        <div id="namediv" class="stuffbox">
-			            <h3><label for="link_name"><?php _e('Settings','wpomp'); ?></label></h3>
-			            <div class="inside">
+		<div id="poststuff">
+			<div id="post-body" class="metabox-holder columns-2">
+				<div id="post-body-content">
+					<div id="namediv" class="stuffbox">
+						<h3 class="hndle"><?php _e('Settings','wpomp'); ?></h3>
+						<div class="inside">
 							<form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
 								<table class="form-table">
 									<tr valign="top">
@@ -97,11 +84,25 @@ function wpomp_settings_options() {
 									<input type="submit" value="<?php _e('Update','wpomp');?>" class="button-primary button" name="wpomp-settings"/>
 								</div>
 							</form>
-			            </div>
-			        </div>
-			    </div>
+						</div>
+					</div>
+				</div>
+				<div id="postbox-container-1" class="postbox-container">
+					<div id="side-sortables" class="meta-box-sortables ui-sortable">
+						<div class="postbox">
+							<h3 class="hndle"><?php _e('Uninstall','wpomp'); ?></h3>
+							<div class="inside">
+								<p><?php _e('Click to delete the settings and disable the plugin','wpomp');?>.</p>
+								<form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
+									<?php wp_nonce_field('wpomp-uninstall');?>
+									<input type="submit" value="<?php _e('Uninstall now','wpomp');?>" class="button" name="wpomp-uninstall"/>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br class="clear">
 			</div>
 		</div>
-
 	</div>
 <?php } ?>
