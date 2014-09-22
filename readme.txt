@@ -3,7 +3,7 @@ Contributors: rvola
 Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
@@ -20,6 +20,9 @@ La nouvelle version de Wordpress 4.0, 3.9, 3.8, 3.7, 3.6 et 3.5 a changé la pag
 Il y existe une constante wp-config.php, mais elle ne prend pas en compte les sous-domaines.
 Ce plug-in est conçu pour les installations vierges de WordPress.
 Une fois activé, le plugin va ajouter deux valeurs dans la base de données, vous les modifierez par la suite.
+
+= [i18n] =
+* German by <a href="http://www.feuerwehrmuseum-sh.de" rel="nofollow" target="_blank">Dr. Hajo Brandenburg - Feuerwehrmuseum</a>
 
 == Installation ==
 = [EN] =
@@ -98,6 +101,9 @@ Nous sommes heureux que vous souhaitiez nous aider à améliorer le WP Original 
 Pour nous aider, rendez-vous directement dans le formulaire du plugin http://wordpress.org/support/plugin/wp-original-media-path et postez-nous vos suggestions.
 
 == Changelog ==
+
+= 1.4.1 | 22/09/2014 =
+* German Translation by <a href="http://www.feuerwehrmuseum-sh.de" rel="nofollow" target="_blank">Dr. Hajo Brandenburg - Feuerwehrmuseum</a>
 
 = 1.4.0 | 03/09/2014 =
 * Correct classname responsive
