@@ -1,9 +1,9 @@
 === WP Original Media Path ===
 Contributors: rvola
-Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2
+Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3
 Requires at least: 3.5
-Tested up to: 4.2
-Stable tag: 1.4.1
+Tested up to: 4.3
+Stable tag: 1.5.0
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
@@ -26,13 +26,13 @@ Une fois activé, le plugin va ajouter deux valeurs dans la base de données, vo
 
 == Installation ==
 = [EN] =
-* Activate the plugin installed on a new Wordpress 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 or 3.5.
+* Activate the plugin installed on a new Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 or 3.5.
 * Go to the option page of the plugin to complete the configuration
 * Modify the desired values ​​'Store uploaded files in this folder' and 'full web address for the'.
 * That's it!
 
 = [FR] =
-* Activer le plugin installé sur un nouveau Wordpress 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 ou 3.5.
+* Activer le plugin installé sur un nouveau Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 ou 3.5.
 * Rendez-vous à la page option du plugin pour terminer la configuration
 * Modifiez les valeurs souhaitées 'Stocker les fichiers envoyés dans ce dossier' et 'Adresse web complète pour les fichiers'.
 * C'est fini!
@@ -58,11 +58,6 @@ This plug-in is only used to mount a mirror subdomains on Wordpress installation
 * Do not panic!
 * Refer to the help for configuring media fields.
 * You can always follow the uninstallation procedure if you want to reverse
-
-= How to completely uninstall the plugin? =
-1. Go to the option page of the plugin.
-2. Click Uninstall and follow the procedure.
-3. You just have to disable the plugin
 
 = I want to make suggestions =
 We're glad you want to help us improve the WP Original Media Path!
@@ -90,46 +85,45 @@ Ce plug-in sert uniquement à monter un miroir de sous-domaines sur l’installa
 * Reportez-vous à l'aide pour la configuration des champs médias.
 * Vous pouvez toujours suivre la procédure de désinstallation si vous souhaitez revenir à l'origine
 
-= Comment désinstaller complètement le plugin? =
-1. Aller dans la page d’option du plugin.
-2. Cliquez sur Désinstaller et suivez la procédure.
-3. Vous n’avez plus qu’à désactiver le plugin
-
-
 = Je souhaite apporter des suggestions =
 Nous sommes heureux que vous souhaitiez nous aider à améliorer le WP Original Media Path !
 Pour nous aider, rendez-vous directement dans le formulaire du plugin http://wordpress.org/support/plugin/wp-original-media-path et postez-nous vos suggestions.
 
 == Changelog ==
 
-= 1.4.1 | 22/09/2014 =
+= 1.5.0 | 2015-08-28 =
+* Settings API
+* uninstall.php file
+* recode
+
+= 1.4.1 | 2014-09-22 =
 * German Translation by <a href="http://www.feuerwehrmuseum-sh.de" rel="nofollow" target="_blank">Dr. Hajo Brandenburg - Feuerwehrmuseum</a>
 
-= 1.4.0 | 03/09/2014 =
+= 1.4.0 | 2014-09-03 =
 * Correct classname responsive
 * Check compatibility WordPress 4.0
 * Update readme
 * Update assets Repository
 * Update and clean files PO & MO
 
-= 1.3.0 | 18/07/2013 =
+= 1.3.0 | 2013-07-18 =
 * Page options
 * Possibility to disable the plug-in settings without deleting
 * Established translations
 * Update Installation and FAQ
 
-= 1.2.0 | 01/05/2013 =
+= 1.2.0 | 2013-05-01 =
 * Bug link setting
 * uninstalling the plugin with the deactivation
 * Update FAQ
 
-= 1.1.0 | 29/03/2013 =
+= 1.1.0 | 2013-03-29 =
 * FAQ
 * Auto fill fields
 
-= 1.0.1. | 06/01/2013 =
+= 1.0.1. | 2013-01-06 =
 * Contributors list
 * Text fields
 
-= 1.0.0. | 28/12/2012 =
+= 1.0.0. | 2012-12-28 =
 * Launch Plugin
