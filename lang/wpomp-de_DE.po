@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Original Media Path - 1.4.1\n"
+"POT-Creation-Date: 2013-07-18 11:03+0100\n"
+"PO-Revision-Date: 2014-09-22 20:40+0100\n"
+"Last-Translator: Dr. Hajo Brandenburg <feuerwehrmuseum@wtnet.de>\n"
+"Language-Team: Dr. Hajo Brandenburg <feuerwehrmuseum@wtnet.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2;plural=n>2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+msgid "Uninstall completed."
+msgstr "Deinstallation ist erfolgt."
+
+msgid "Click here now to disable the plugin"
+msgstr "Klicke hier, um das Plugin abzuschalten."
+
+msgid "Uninstall"
+msgstr "Deinstallation"
+
+msgid "Click to delete the settings and disable the plugin"
+msgstr "Klicke hier, um das Plugin abzuschalten und die Einstellungen zu löschen"
+
+msgid "Uninstall now"
+msgstr "Deinstallation starten"
+
+msgid "Store uploads in this folder"
+msgstr "Uploads in folgendem Ordner speichern"
+
+msgid "Default is <code>wp-content/uploads</code>"
+msgstr "Voreingestellt ist <code>wp-content/uploads</code>"
+
+msgid "Full URL path to files"
+msgstr "Kompletter Pfad zu den Dateien als URL"
+
+msgid "Configuring this is optional. By default, it should be blank."
+msgstr "Diese Einstellung ist optional. Standardmäßig sollte sie leer sein"
+
+msgid "Update"
+msgstr "Aktualisierung"
+

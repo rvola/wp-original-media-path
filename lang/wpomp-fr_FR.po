@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Original Media Path - 1.4.0\n"
+"POT-Creation-Date: 2014-09-03 10:26+0100\n"
+"PO-Revision-Date: 2014-09-03 11:26+0100\n"
+"Last-Translator: \n"
+"Language-Team: studio RVOLA <hello@rvola.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2;plural=n>2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "Settings"
+msgstr "Réglages"
+
+msgid "Settings saved."
+msgstr "Réglages enregistrés."
+
+msgid "Uninstall completed."
+msgstr "Désinstallation terminée."
+
+msgid "Click here now to disable the plugin"
+msgstr "Cliquez ici maintenant pour désactiver le plugin"
+
+msgid "Uninstall"
+msgstr "Désinstaller"
+
+msgid "Click to delete the settings and disable the plugin"
+msgstr "Cliquez pour supprimer les réglages et désactiver le plugin"
+
+msgid "Uninstall now"
+msgstr "Désinstaller maintenant"
+
+msgid "Store uploads in this folder"
+msgstr "Stocker les fichiers envoyés dans ce dossier"
+
+msgid "Default is <code>wp-content/uploads</code>"
+msgstr "Par défaut, <code>wp-content/uploads</code>"
+
+msgid "Full URL path to files"
+msgstr "Adresse web complète pour les fichiers"
+
+msgid "Configuring this is optional. By default, it should be blank."
+msgstr "Ce réglage est facultatif. Par défaut, ce champ devrait être vide."
+
+msgid "Update"
+msgstr "Mettre à jour"
