@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Original Media Path - 1.5.0\n"
+"POT-Creation-Date: 2015-08-28 09:20+0200\n"
+"PO-Revision-Date: 2015-08-28 09:21+0200\n"
+"Last-Translator: Nicolas GEHIN <hello@rvola.com>\n"
+"Language-Team: studio RVOLA <hello@rvola.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-KeywordsList: _;__;_e\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2;plural=n>2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp_original_media_path.php:121
+msgid "Settings"
+msgstr "Réglages"
+
+#: wp_original_media_path.php:162
+msgid "Uploading Files"
+msgstr "Envoi de fichiers"
+
+#: wp_original_media_path.php:188
+msgid "Store uploads in this folder"
+msgstr "Stocker les fichiers envoyés dans ce dossier"
+
+#: wp_original_media_path.php:189
+msgid "Default is <code>wp-content/uploads</code>"
+msgstr "Par défaut, <code>wp-content/uploads</code>"
+
+#: wp_original_media_path.php:193
+msgid "Full URL path to files"
+msgstr "Adresse web complète pour les fichiers"
+
+#: wpomp-options.php:5
+msgid "FAQ"
+msgstr "FAQ"
+
+#: wpomp-options.php:6
+msgid "How to Configure"
+msgstr "Comment faire pour configurer"
