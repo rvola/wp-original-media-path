@@ -2,22 +2,21 @@
 Contributors: rvola
 Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3
 Requires at least: 3.5
-Tested up to: 4.3
+Tested up to: 4.3.1
 Stable tag: 1.5.0
 License: GPLv2 or later
-test
 
 Displays the fields to change the url and file upload
 
 == Description ==
 = [EN] =
-The new version of Wordpress 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 and 3.5 has changed the media page, removing the two fields to define the location and the sub-field of media.
+The new version of Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 and 3.5 has changed the media page, removing the two fields to define the location and the sub-field of media.
 There exists a constant wp-config.php, but it does not include sub-domains.
 This plug-in is designed for installations virgin WordPress.
 Once activated, the plugin will add two values ​​in the database, you modify later.
 
 = [FR] =
-La nouvelle version de Wordpress 4.2 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 et 3.5 a changé la page des médias, en supprimant les deux champs permettant de définir l'emplacement et le sous-champ des médias.
+La nouvelle version de Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 et 3.5 a changé la page des médias, en supprimant les deux champs permettant de définir l'emplacement et le sous-champ des médias.
 Il y existe une constante wp-config.php, mais elle ne prend pas en compte les sous-domaines.
 Ce plug-in est conçu pour les installations vierges de WordPress.
 Une fois activé, le plugin va ajouter deux valeurs dans la base de données, vous les modifierez par la suite.
