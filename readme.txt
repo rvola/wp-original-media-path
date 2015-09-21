@@ -5,6 +5,7 @@ Requires at least: 3.5
 Tested up to: 4.3
 Stable tag: 1.5.0
 License: GPLv2 or later
+test
 
 Displays the fields to change the url and file upload
 
