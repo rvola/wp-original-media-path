@@ -6,9 +6,9 @@ Plugin URI: 	http://wordpress.org/plugins/wp-original-media-path/
 Description: 	Restore the fields to change the url and file upload | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a>
 License:		GPLv2 or later
 
-Version: 		1.5.0
+Version: 		1.5.1
 Creation:		2013-01-06
-Revision:		2015-08-28
+Revision:		2015-10-14
 
 Author:			RVOLA
 Author URI:		http://rvola.com
