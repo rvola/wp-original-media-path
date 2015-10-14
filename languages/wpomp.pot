@@ -1,0 +1,66 @@
+# Copyright (C) 2015 WP Original Media Path
+# This file is distributed under the same license as the WP Original Media Path package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Original Media Path 1.5.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-original-media-"
+"path\n"
+"POT-Creation-Date: 2015-10-14 15:07:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: wp_original_media_path.php:121
+msgid "Settings"
+msgstr ""
+
+#: wp_original_media_path.php:162
+msgid "Uploading Files"
+msgstr ""
+
+#: wp_original_media_path.php:188
+msgid "Store uploads in this folder"
+msgstr ""
+
+#: wp_original_media_path.php:189
+msgid "Default is <code>wp-content/uploads</code>"
+msgstr ""
+
+#: wp_original_media_path.php:193
+msgid "Full URL path to files"
+msgstr ""
+
+#: wpomp-options.php:5
+msgid "FAQ"
+msgstr ""
+
+#: wpomp-options.php:6
+msgid "How to Configure"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Original Media Path"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/wp-original-media-path/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Restore the fields to change the url and file upload | <a href=\"http://"
+"wordpress.org/plugins/wp-original-media-path/faq/\" target=\"_blank\">FAQ</"
+"a> | <a href=\"http://wordpress.org/plugins/wp-original-media-path/"
+"installation/\" target=\"_blank\">How to Configure</a>"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "RVOLA"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://rvola.com"
+msgstr ""
