@@ -3,7 +3,7 @@ Contributors: rvola
 Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3
 Requires at least: 3.5
 Tested up to: 4.3.1
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
