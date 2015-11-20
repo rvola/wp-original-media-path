@@ -1,8 +1,8 @@
 === WP Original Media Path ===
 Contributors: rvola
-Tags: media, upload, path, subdomain, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3
+Tags: media, upload, path, subdomain
 Requires at least: 3.5
-Tested up to: 4.3.1
+Tested up to: 4.4
 Stable tag: 1.5.1
 License: GPLv2 or later
 
@@ -10,29 +10,41 @@ Displays the fields to change the url and file upload
 
 == Description ==
 = [EN] =
-The new version of Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 and 3.5 has changed the media page, removing the two fields to define the location and the sub-field of media.
+Wordpress has changed the media page, removing the two fields to define the location and the sub-field of media.
 There exists a constant wp-config.php, but it does not include sub-domains.
-This plug-in is designed for installations virgin WordPress.
 Once activated, the plugin will add two values ​​in the database, you modify later.
+The plugin is not retroactive for images already uploaded
+
+**Thank you to try to find the solution by yourself or on the forum.**
+**The author of the plug-in is no after-sales service.**
+**Most of the issues have already been addressed.**
+
+*end of support 2015-12-28*
 
 = [FR] =
-La nouvelle version de Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 et 3.5 a changé la page des médias, en supprimant les deux champs permettant de définir l'emplacement et le sous-champ des médias.
+Wordpress a changé la page des médias, en supprimant les deux champs permettant de définir l'emplacement et le sous-champ des médias.
 Il y existe une constante wp-config.php, mais elle ne prend pas en compte les sous-domaines.
-Ce plug-in est conçu pour les installations vierges de WordPress.
 Une fois activé, le plugin va ajouter deux valeurs dans la base de données, vous les modifierez par la suite.
+Le plug-in n'est pas rétroactif pour les images déjà uploadées.
+
+**Merci d'essayer de trouver la solution par vous-même ou sur le forum.**
+**L’auteur du plug-in ne fait pas de SAV.**
+**La plupart des questions ont déjà été abordées.**
+
+*fin du support 28/12/2015*
 
 = [i18n] =
 * German by <a href="http://www.feuerwehrmuseum-sh.de" rel="nofollow" target="_blank">Dr. Hajo Brandenburg - Feuerwehrmuseum</a>
 
 == Installation ==
 = [EN] =
-* Activate the plugin installed on a new Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 or 3.5.
+* Activate the plugin
 * Go to the option page of the plugin to complete the configuration
 * Modify the desired values ​​'Store uploaded files in this folder' and 'full web address for the'.
 * That's it!
 
 = [FR] =
-* Activer le plugin installé sur un nouveau Wordpress 4.3, 4.2, 4.1, 4.0, 3.9, 3.8, 3.7, 3.6 ou 3.5.
+* Activer le plugin
 * Rendez-vous à la page option du plugin pour terminer la configuration
 * Modifiez les valeurs souhaitées 'Stocker les fichiers envoyés dans ce dossier' et 'Adresse web complète pour les fichiers'.
 * C'est fini!
@@ -53,6 +65,7 @@ This plug-in is only used to mount a mirror subdomains on Wordpress installation
 = I just set the plug-in, but the images are not displayed =
 1. Check that the path is correct specify
 2. Check that the file was created on the server with the chmod 777 or 755
+3. Visit this page : https://wordpress.org/support/topic/images-not-getting-uploaded-to-subdomain-or-anywhere
 
 = My site is broken =
 * Do not panic!
@@ -79,6 +92,7 @@ Ce plug-in sert uniquement à monter un miroir de sous-domaines sur l’installa
 = Je viens de régler le plug-in, mais les images ne s’affichent pas =
 1. Verifier que le chemin specifier est correct
 2. Vérifier que le dossier a été créé sur le serveur avec le chmod 777 ou 755
+3. Consultez cette page : https://wordpress.org/support/topic/images-not-getting-uploaded-to-subdomain-or-anywhere
 
 = Mon site est cassé =
 * Ne paniquez pas!
@@ -90,6 +104,14 @@ Nous sommes heureux que vous souhaitiez nous aider à améliorer le WP Original 
 Pour nous aider, rendez-vous directement dans le formulaire du plugin http://wordpress.org/support/plugin/wp-original-media-path et postez-nous vos suggestions.
 
 == Changelog ==
+
+= 1.5.1 | 2015-11-19 =
+* Check Wordpress 4.4
+* Update readme
+
+= 1.5.1 | 2015-10-14 =
+* New File POT
+* Github link
 
 = 1.5.0 | 2015-08-28 =
 * Settings API
