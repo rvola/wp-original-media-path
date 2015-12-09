@@ -9,7 +9,6 @@ License: GPLv2 or later
 Displays the fields to change the url and file upload
 
 == Description ==
-= [EN] =
 Wordpress has changed the media page, removing the two fields to define the location and the sub-field of media.
 There exists a constant wp-config.php, but it does not include sub-domains.
 Once activated, the plugin will add two values ​​in the database, you modify later.
@@ -21,33 +20,14 @@ The plugin is not retroactive for images already uploaded
 
 *end of support 2015-12-28*
 
-= [FR] =
-Wordpress a changé la page des médias, en supprimant les deux champs permettant de définir l'emplacement et le sous-champ des médias.
-Il y existe une constante wp-config.php, mais elle ne prend pas en compte les sous-domaines.
-Une fois activé, le plugin va ajouter deux valeurs dans la base de données, vous les modifierez par la suite.
-Le plug-in n'est pas rétroactif pour les images déjà uploadées.
-
-**Merci d'essayer de trouver la solution par vous-même ou sur le forum.**
-**L’auteur du plug-in ne fait pas de SAV.**
-**La plupart des questions ont déjà été abordées.**
-
-*fin du support 28/12/2015*
-
 = [i18n] =
 * German by <a href="http://www.feuerwehrmuseum-sh.de" rel="nofollow" target="_blank">Dr. Hajo Brandenburg - Feuerwehrmuseum</a>
 
 == Installation ==
-= [EN] =
 * Activate the plugin
 * Go to the option page of the plugin to complete the configuration
 * Modify the desired values ​​'Store uploaded files in this folder' and 'full web address for the'.
 * That's it!
-
-= [FR] =
-* Activer le plugin
-* Rendez-vous à la page option du plugin pour terminer la configuration
-* Modifiez les valeurs souhaitées 'Stocker les fichiers envoyés dans ce dossier' et 'Adresse web complète pour les fichiers'.
-* C'est fini!
 
 == Frequently Asked Questions ==
 
@@ -75,33 +55,6 @@ This plug-in is only used to mount a mirror subdomains on Wordpress installation
 = I want to make suggestions =
 We're glad you want to help us improve the WP Original Media Path!
 To help us, go directly into the form of http://wordpress.org/support/plugin/wp-original-media-path plugin and mail us your suggestions.
-
-=########################=
-
-= Comment configurer mon plugin ? =
-Le premier correspond à votre dossier d'uploads sans le domaine.
-Par exemple si votre dossier d'upload se trouve à la racine du site et qu'il se nomme 'mes-images' le premier champ dois être remplis 'mes-images'
-
-Le deuxième champ représente l'URL complète vers le dossier d'uploads.
-Dans l'exemple précédent, le champ ressemble à ceci : 'http://www.siteweb.com/mes-images'
-
-= Le plugin fonctionne-t-il avec un vrai CDN ? =
-Non malheureusement. Car WordPress doit pouvoir gérer le dossier d’uploads directement.
-Ce plug-in sert uniquement à monter un miroir de sous-domaines sur l’installation de Wordpress ou à modifier l’emplacement du dossier uploads
-
-= Je viens de régler le plug-in, mais les images ne s’affichent pas =
-1. Verifier que le chemin specifier est correct
-2. Vérifier que le dossier a été créé sur le serveur avec le chmod 777 ou 755
-3. Consultez cette page : https://wordpress.org/support/topic/images-not-getting-uploaded-to-subdomain-or-anywhere
-
-= Mon site est cassé =
-* Ne paniquez pas!
-* Reportez-vous à l'aide pour la configuration des champs médias.
-* Vous pouvez toujours suivre la procédure de désinstallation si vous souhaitez revenir à l'origine
-
-= Je souhaite apporter des suggestions =
-Nous sommes heureux que vous souhaitiez nous aider à améliorer le WP Original Media Path !
-Pour nous aider, rendez-vous directement dans le formulaire du plugin http://wordpress.org/support/plugin/wp-original-media-path et postez-nous vos suggestions.
 
 == Changelog ==
 
