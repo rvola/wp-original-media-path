@@ -16,7 +16,7 @@ Author:			RVOLA
 Author URI:		http://rvola.com
 
 Domain Path: /languages/
-Text Domain: wpomp
+Text Domain: wp-original-media-path
 
 */
 
@@ -46,6 +46,7 @@ add_action( 'plugins_loaded', array( 'WPOMP', 'load' ), 10 );
 final class WPOMP {
 
 	const NAME = "WP Original Media Path";
+	const I18N = "wp-original-media-path";
 
 	/*--------------------------------------------------------- */
 
@@ -75,8 +76,8 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
-	public static function il18n(){
-		load_plugin_textdomain('wpomp', false, dirname(plugin_basename(__FILE__)).'/languages/');
+	public static function loadTextDomain() {
+		load_plugin_textdomain( self::I18N, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	public static function activate() {
@@ -143,8 +144,8 @@ final class WPOMP {
 		$fields_tab = array(
 			'upload_path'     => array(
 				'id'             => 'upload_path',
-				'description'    => __('Default is <code>wp-content/uploads</code>'),
 				'title'          => __( 'Store uploads in this folder' ),
+				'description'    => sprintf( __( 'Default is %s' ), '<code>wp-content/uploads</code>' ),
 			),
 			'upload_url_path' => array(
 				'id'             => 'upload_url_path',
