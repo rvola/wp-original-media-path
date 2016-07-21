@@ -45,7 +45,7 @@ add_action( 'plugins_loaded', array( 'WPOMP', 'load' ), 10 );
 
 final class WPOMP {
 
-	private $_PLUGIN_NAME = "WP Original Media Path";
+	const NAME = "WP Original Media Path";
 
 	/*--------------------------------------------------------- */
 
@@ -109,8 +109,8 @@ final class WPOMP {
 	public function linkSidebar() {
 		add_submenu_page(
 			'options-general.php',
-			$this->_PLUGIN_NAME,
-			$this->_PLUGIN_NAME,
+			self::NAME,
+			self::NAME,
 			'manage_options',
 			'wpomp-options',
 			array( $this, 'optionsPages' )

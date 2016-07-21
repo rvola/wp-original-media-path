@@ -1,6 +1,6 @@
 <?php if( ! defined( 'ABSPATH') ) exit; ?>
 <div class="wrap">
-	<h2><?php echo $this->_PLUGIN_NAME;?></h2>
+	<h1><?php echo self::NAME;?></h1>
 	<p>
 		<a href="https://github.com/rvola/wp-original-media-path" target="_blank" class="button">GitHub</a>
 		<a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank" class="button"><?php _e('FAQ', 'wpomp');?></a>
