@@ -40,7 +40,7 @@ Text Domain: wpomp
 
 if(!defined('ABSPATH')) exit;
 
-register_activation_hook(__FILE__, array('WPOMP', 'Activation'));
+register_activation_hook(__FILE__, array('WPOMP', 'activate'));
 add_action('plugins_loaded', array('WPOMP', 'Load'), 10);
 
 final class WPOMP {
@@ -73,18 +73,22 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
-	public static function Activation() {
-		if (get_option('upload_path') == '' || get_option('upload_url_path') == '') {
-			$upload_dir = wp_upload_dir();
-			update_option('upload_path', 'wp-content/uploads', true);
-			update_option('upload_url_path', $upload_dir['baseurl'], true);
-		}
-	}
-
-	/*--------------------------------------------------------- */
-
 	public static function il18n(){
 		load_plugin_textdomain('wpomp', false, dirname(plugin_basename(__FILE__)).'/languages/');
+	}
+
+	public static function activate() {
+		$upload_url_path = get_option( 'upload_url_path' );
+
+		if (
+			   isset( $upload_path ) && empty( $upload_path)
+			&& isset( $upload_url_path ) && empty( $upload_url_path)
+		){
+			$upload_dir = wp_upload_dir();
+			update_option( 'upload_path', 'wp-content/uploads', true );
+			update_option( 'upload_url_path', $upload_dir['baseurl'], true ) ;
+		}
+
 	}
 
 	/*--------------------------------------------------------- */
