@@ -63,14 +63,12 @@ final class WPOMP {
 
 		$plugin_file = plugin_basename( __FILE__ );
 
-
 		add_action( 'init', array( $this, 'loadTextDomain' ), 10 );
 		add_filter( "plugin_action_links_{$plugin_file}", array( $this, 'linkPluginPage' ), 10, 1 );
 		add_action( 'admin_menu', array( $this, 'linkSidebar' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerSections' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerFields' ), 10 );
 		add_action( 'admin_init', array( $this, 'addFields' ), 10 );
-
 
 	}
 
@@ -79,6 +77,8 @@ final class WPOMP {
 	public static function loadTextDomain() {
 		load_plugin_textdomain( self::I18N, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
+
+	/*--------------------------------------------------------- */
 
 	public static function activate() {
 		$upload_url_path = get_option( 'upload_url_path' );
