@@ -1,4 +1,4 @@
-<?php if(!defined('ABSPATH')) exit;?>
+<?php if( ! defined( 'ABSPATH') ) exit; ?>
 <div class="wrap">
 	<h2><?php echo $this->_PLUGIN_NAME;?></h2>
 	<p>
@@ -8,8 +8,8 @@
 	</p>
 	<form method="post" action="options.php">
 	<?php
-		settings_fields('wpomp_fields');
-		do_settings_sections('wpomp_pages');
+		settings_fields( 'wpomp_fields' );
+		do_settings_sections( 'wpomp_pages' );
 		submit_button();
 	?>
 	</form>

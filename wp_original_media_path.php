@@ -38,10 +38,10 @@ Text Domain: wpomp
  *	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-if(!defined('ABSPATH')) exit;
+if( ! defined( 'ABSPATH' ) ) exit;
 
-register_activation_hook(__FILE__, array('WPOMP', 'activate'));
-add_action('plugins_loaded', array('WPOMP', 'Load'), 10);
+register_activation_hook( __FILE__, array( 'WPOMP', 'activate' ) );
+add_action( 'plugins_loaded', array( 'WPOMP', 'load' ), 10 );
 
 final class WPOMP {
 
@@ -50,8 +50,8 @@ final class WPOMP {
 	/*--------------------------------------------------------- */
 
 	private static $_instance = null;
-	public static function Load() {
-		if(is_null(self::$_instance)) {
+	public static function load() {
+		if( is_null( self::$_instance ) ) {
 			$class = __CLASS__;
 			self::$_instance = new $class;
 		}
@@ -60,14 +60,16 @@ final class WPOMP {
 
 	public function __construct() {
 
-		add_action('init', array($this, 'il18n'), 10);
+		$plugin_file = plugin_basename( __FILE__ );
 
-		add_filter("plugin_action_links_".plugin_basename(__FILE__), array($this, 'SettingLink'), 10, 1);
-		add_action('admin_menu', array($this, 'SubMenu'), 10);
 
-		add_action('admin_init', array($this, 'RegisterSections'), 10);
-		add_action('admin_init', array($this, 'RegisterFields'), 10);
-		add_action('admin_init', array($this, 'AddFields'), 10);
+		add_action( 'init', array( $this, 'loadTextDomain' ), 10 );
+		add_filter( "plugin_action_links_{$plugin_file}", array( $this, 'linkPluginPage' ), 10, 1 );
+		add_action( 'admin_menu', array( $this, 'linkSidebar' ), 10 );
+		add_action( 'admin_init', array( $this, 'registerSections' ), 10 );
+		add_action( 'admin_init', array( $this, 'registerFields' ), 10 );
+		add_action( 'admin_init', array( $this, 'addFields' ), 10 );
+
 
 	}
 
@@ -93,59 +95,60 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
-	public function SettingLink($links) {
+	public function linkPluginPage($links) {
 		array_unshift(
 			$links,
 			sprintf(
 				'<a href="%1$s">%2$s</a>',
-				admin_url('admin.php?page=wpomp-options'),
-				__('Settings')
+				admin_url( 'admin.php?page=wpomp-options' ),
+				__( 'Settings' )
 			)
 		);
 		return $links;
 	}
-	public function SubMenu() {
+	public function linkSidebar() {
 		add_submenu_page(
 			'options-general.php',
 			$this->_PLUGIN_NAME,
 			$this->_PLUGIN_NAME,
 			'manage_options',
 			'wpomp-options',
-			array($this, 'OptionsPages')
+			array( $this, 'optionsPages' )
 		);
 	}
 
-	public function OptionsPages() {
-		include(dirname(__FILE__).'/wpomp-options.php');
 	/*--------------------------------------------------------- */
+
+	public function optionsPages() {
+		include( dirname( __FILE__ ) . '/wpomp-options.php' );
 	}
 
 	/*--------------------------------------------------------- */
 
-	public function RegisterSections() {
+	public function registerSections() {
 		add_settings_section(
 			'wpomp_section_main',
-			__('Uploading Files'),
+			__( 'Uploading Files' ),
 			null,
 			'wpomp_pages'
 		);
 	}
-	public function RegisterFields() {
-		register_setting('wpomp_fields', 'upload_path');
-		register_setting('wpomp_fields', 'upload_url_path');
+	public function registerFields() {
+		register_setting( 'wpomp_fields', 'upload_path' );
+		register_setting( 'wpomp_fields', 'upload_url_path' );
 	}
+	public function addFields() {
 
-	public function AddFields() {
 
 		$fields_tab = array(
 			'upload_path'     => array(
 				'id'             => 'upload_path',
-				'title'          => __('Store uploads in this folder'),
 				'description'    => __('Default is <code>wp-content/uploads</code>'),
+				'title'          => __( 'Store uploads in this folder' ),
 			),
 			'upload_url_path' => array(
 				'id'             => 'upload_url_path',
-				'title'          => __('Full URL path to files'),
+				'title'          => __( 'Full URL path to files' ),
 				'description'    => null,
 			),
 		);
@@ -154,15 +157,14 @@ final class WPOMP {
 			add_settings_field(
 				$id,
 				$field['title'],
-				array($this, 'InputFields'),
+				array( $this, 'InputFields' ),
 				'wpomp_pages',
 				'wpomp_section_main',
 				$field
 			);
 		}
 	}
-	public function InputFields($field) {
-
+	public function inputFields($datafield) {
 		printf(
 			'<input name="%1$s" type="text" id="%1$s" value="%2$s" class="regular-text code" />',
 			$field['id'],
