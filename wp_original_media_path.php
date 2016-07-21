@@ -139,9 +139,8 @@ final class WPOMP {
 		register_setting( 'wpomp_fields', 'upload_url_path' );
 	}
 	public function addFields() {
+		$fields = array(
 
-
-		$fields_tab = array(
 			'upload_path'     => array(
 				'id'             => 'upload_path',
 				'title'          => __( 'Store uploads in this folder' ),
@@ -154,7 +153,7 @@ final class WPOMP {
 			),
 		);
 
-		foreach($fields_tab as $id => $field){
+		foreach($fields as $id => $field){
 			add_settings_field(
 				$id,
 				$field['title'],
@@ -168,13 +167,13 @@ final class WPOMP {
 	public function inputFields($datafield) {
 		printf(
 			'<input name="%1$s" type="text" id="%1$s" value="%2$s" class="regular-text code" />',
-			$field['id'],
-			get_option($field['id'])
+			$datafield['id'],
+			get_option( $datafield['id'] )
 		);
 
 		printf(
 			'<p class="description">%s</p>',
-			$field['description']
+			$datafield['description']
 		);
 	}
 
