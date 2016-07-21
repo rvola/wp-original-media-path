@@ -3,7 +3,7 @@ Contributors: rvola
 Tags: media, upload, path, subdomain
 Requires at least: 3.5
 Tested up to: 4.6
-Stable tag: 1.5.1
+Stable tag: 1.6.1
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
@@ -52,6 +52,24 @@ We're glad you want to help us improve the WP Original Media Path!
 To help us, go directly into the form of http://wordpress.org/support/plugin/wp-original-media-path plugin and mail us your suggestions.
 
 == Changelog ==
+
+= 1.6.1 | 2016-08-01 =
+* FIX / Install fields
+
+= 1.6.0 | 2016-07-21 =
+* NEW / Changelog GitHub
+* UPDATED / readme GitHub
+* MINOR / space
+* MINOR / Update variable name
+* UPDATED / i18n
+* UPDATED / const NAME
+* UPDATED / Pear conventions
+* UPDATED / Activate function
+* UPDATED / Class become final class
+* MINOR / deleted comments
+* NEW / Licence GPL V3
+* Readme Markdown
+* Update Readme
 
 = 1.5.1 | 2015-11-19 =
 * Check Wordpress 4.4

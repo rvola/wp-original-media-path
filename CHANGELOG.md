@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.6.0](https://github.com/rvola/wp-original-media-path/tree/1.6.0) - 2016-07-21
+
+* NEW / Changelog GitHub
+* UPDATED / readme GitHub
+* MINOR / space
+* MINOR / Update variable name
+* UPDATED / i18n
+* UPDATED / const NAME
+* UPDATED / Pear conventions
+* UPDATED / Activate function
+* UPDATED / Class become final class
+* MINOR / deleted comments
+* NEW / Licence GPL V3
+* Readme Markdown
+* Update Readme
+
 ## [1.5.1](https://github.com/rvola/wp-original-media-path/tree/1.5.1) - 2015-11-19
 
 * Check Wordpress 4.4
