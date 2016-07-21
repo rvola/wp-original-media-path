@@ -43,7 +43,7 @@ if(!defined('ABSPATH')) exit;
 register_activation_hook(__FILE__, array('WPOMP', 'Activation'));
 add_action('plugins_loaded', array('WPOMP', 'Load'), 10);
 
-class WPOMP {
+final class WPOMP {
 
 	private $_PLUGIN_NAME = "WP Original Media Path";
 
