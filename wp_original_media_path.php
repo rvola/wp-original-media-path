@@ -81,6 +81,7 @@ final class WPOMP {
 	/*--------------------------------------------------------- */
 
 	public static function activate() {
+		$upload_path	 = get_option( 'upload_path' );
 		$upload_url_path = get_option( 'upload_url_path' );
 
 		if (
@@ -88,8 +89,10 @@ final class WPOMP {
 			&& isset( $upload_url_path ) && empty( $upload_url_path)
 		){
 			$upload_dir = wp_upload_dir();
-			update_option( 'upload_path', 'wp-content/uploads', true );
-			update_option( 'upload_url_path', $upload_dir['baseurl'], true ) ;
+			$folder = str_replace( home_url() . '/', '', $upload_dir['baseurl'] );
+
+			update_option( 'upload_path', $folder, true );
+			update_option( 'upload_url_path', $upload_dir['baseurl'], true );
 		}
 
 	}
