@@ -8,8 +8,8 @@ Description: 	Restore the fields to change the url and file upload | <a href="ht
 License:		GPLv3
 License URI:	https://www.gnu.org/licenses/gpl-3.0
 
-Version: 		1.6.0
-Revision:		2016-07-21
+Version: 		1.6.1
+Revision:		2016-08-01
 Creation:		2013-01-06
 
 Author:			RVOLA

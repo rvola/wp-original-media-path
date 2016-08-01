@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.6.1](https://github.com/rvola/wp-original-media-path/tree/1.6.1) - 2016-08-01
+
+* FIX / Install fields
+
 ## [1.6.0](https://github.com/rvola/wp-original-media-path/tree/1.6.0) - 2016-07-21
 
 * NEW / Changelog GitHub
