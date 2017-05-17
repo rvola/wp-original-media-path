@@ -84,6 +84,7 @@ final class WPOMP {
 
 		add_action( 'init', array( $this, 'loadTextDomain' ), 10 );
 		add_filter( "plugin_action_links_{$plugin_file}", array( $this, 'linkPluginPage' ), 10, 1 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'styleCSS' ), 10, 1 );
 		add_action( 'admin_menu', array( $this, 'linkSidebar' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerSections' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerFields' ), 10 );
@@ -110,6 +111,14 @@ final class WPOMP {
 			)
 		);
 		return $links;
+	}
+	public function styleCSS( $hook ) {
+		if ( $hook == 'options-media.php' ) {
+			echo '<style type="text/css">';
+				echo '.form-table:nth-of-type(2) tr:nth-of-type(1) {display:none}';
+				echo '.form-table:nth-of-type(2) tr:nth-of-type(2) {display:none}';
+			echo '</style>';
+		}
 	}
 	public function linkSidebar() {
 		add_submenu_page(
