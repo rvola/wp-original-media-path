@@ -138,17 +138,10 @@ final class WPOMP {
 		);
 	}
 	public function registerFields() {
-		register_setting( 'wpomp_fields', 'upload_path' );
 		register_setting( 'wpomp_fields', 'upload_url_path' );
 	}
 	public function addFields() {
 		$fields = array(
-
-			'upload_path'     => array(
-				'id'             => 'upload_path',
-				'title'          => __( 'Store uploads in this folder' ),
-				'description'    => sprintf( __( 'Default is %s' ), '<code>wp-content/uploads</code>' ),
-			),
 			'upload_url_path' => array(
 				'id'             => 'upload_url_path',
 				'title'          => __( 'Full URL path to files' ),
