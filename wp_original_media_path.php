@@ -173,4 +173,12 @@ final class WPOMP {
 		);
 	}
 
+	/*--------------------------------------------------------- */
+
+	private static function clean_slash( $value ) {
+		$value = rtrim( $value, '/\\' );
+		$value = trim( $value, '/\\' );
+		return $value;
+	}
+
 }
