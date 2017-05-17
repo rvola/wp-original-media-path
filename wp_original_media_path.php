@@ -159,7 +159,7 @@ final class WPOMP {
 			'upload_url_path' => array(
 				'id'             => 'upload_url_path',
 				'title'          => __( 'Full URL path to files' ),
-				'description'    => null,
+				'description'    => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.' ), '<strong>' . home_url() . '</strong>' ),
 			),
 		);
 
