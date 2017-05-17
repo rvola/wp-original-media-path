@@ -139,7 +139,11 @@ final class WPOMP {
 		);
 	}
 	public function registerFields() {
-		register_setting( 'wpomp_fields', 'upload_url_path' );
+		register_setting(
+			'wpomp_fields',
+			'upload_url_path',
+			array( $this, 'sanitize_url' )
+		);
 	}
 	public function addFields() {
 		$fields = array(
@@ -176,6 +180,15 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
+	public function sanitize_url( $value ) {
+		$value = $this->clean_slash( $value );
+		$value = esc_url( $value );
+
+		//save path automatically
+		$this->set_uploadPath( $value );
+
+		return $value;
+	}
 	private static function clean_slash( $value ) {
 		$value = rtrim( $value, '/\\' );
 		$value = trim( $value, '/\\' );
