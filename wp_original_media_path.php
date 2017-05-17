@@ -80,6 +80,8 @@ final class WPOMP {
 
 	public function __construct() {
 
+		$this->check_multisite();
+
 		$plugin_file = plugin_basename( __FILE__ );
 
 		add_action( 'init', array( $this, 'loadTextDomain' ), 10 );
@@ -89,7 +91,23 @@ final class WPOMP {
 		add_action( 'admin_init', array( $this, 'registerSections' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerFields' ), 10 );
 		add_action( 'admin_init', array( $this, 'addFields' ), 10 );
+	}
 
+	private function check_multisite() {
+		if ( is_multisite() ) {
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			deactivate_plugins( plugin_basename( __FILE__ ) );
+			wp_die(
+				__( 'This plugin is not multisite. Sorry for the inconvenience.' ),
+				sprintf (
+					__( 'Error : %s' ),
+					self::NAME
+				),
+				array(
+					'back_link' => true
+				)
+			);
+		}
 	}
 
 	/*--------------------------------------------------------- */
