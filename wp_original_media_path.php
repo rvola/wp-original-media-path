@@ -100,8 +100,7 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
-
-	public function linkPluginPage($links) {
+	public function linkPluginPage( $links ) {
 		array_unshift(
 			$links,
 			sprintf(
@@ -137,8 +136,6 @@ final class WPOMP {
 		include( dirname( __FILE__ ) . '/wpomp-options.php' );
 	}
 
-	/*--------------------------------------------------------- */
-
 	public function registerSections() {
 		add_settings_section(
 			'wpomp_section_main',
@@ -163,7 +160,7 @@ final class WPOMP {
 			),
 		);
 
-		foreach($fields as $id => $field){
+		foreach( $fields as $id => $field ){
 			add_settings_field(
 				$id,
 				$field['title'],
@@ -174,7 +171,7 @@ final class WPOMP {
 			);
 		}
 	}
-	public function inputFields($datafield) {
+	public function inputFields( $datafield ) {
 		printf(
 			'<input name="%1$s" type="text" id="%1$s" value="%2$s" class="regular-text code" />',
 			$datafield['id'],
