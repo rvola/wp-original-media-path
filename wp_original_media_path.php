@@ -181,4 +181,20 @@ final class WPOMP {
 		return $value;
 	}
 
+	/*--------------------------------------------------------- */
+
+	private static function set_uploadPath( $url ) {
+		$value = null;
+		if ( strpos( $url, home_url() ) !== false ) {
+			$value = str_replace( home_url(), '', $url );
+		} else {
+			$path = parse_url( $url );
+			if ( isset( $path['path'] ) ) {
+				$value = $path['path'];
+			}
+		}
+		$value = self::clean_slash( $value );
+		update_option( 'upload_path', $value, true );
+	}
+
 }
