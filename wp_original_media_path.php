@@ -58,6 +58,25 @@ final class WPOMP {
 		}
 		return self::$_instance;
 	}
+	public static function activate() {
+		$upload_path	 = get_option( 'upload_path' );
+		$upload_url_path = get_option( 'upload_url_path' );
+
+		if (
+			   isset( $upload_path ) && empty( $upload_path)
+			&& isset( $upload_url_path ) && empty( $upload_url_path)
+		){
+			$upload_dir = wp_upload_dir();
+			$default_url  = self::clean_slash( $upload_dir['baseurl'] );
+
+			self::set_uploadPath( $default_url );
+			update_option( 'upload_url_path', $default_url, true );
+
+		}
+
+	}
+
+	/*--------------------------------------------------------- */
 
 	public function __construct() {
 
@@ -80,24 +99,6 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
-	public static function activate() {
-		$upload_path	 = get_option( 'upload_path' );
-		$upload_url_path = get_option( 'upload_url_path' );
-
-		if (
-			   isset( $upload_path ) && empty( $upload_path)
-			&& isset( $upload_url_path ) && empty( $upload_url_path)
-		){
-			$upload_dir = wp_upload_dir();
-			$folder = str_replace( home_url() . '/', '', $upload_dir['baseurl'] );
-
-			update_option( 'upload_path', $folder, true );
-			update_option( 'upload_url_path', $upload_dir['baseurl'], true );
-		}
-
-	}
-
-	/*--------------------------------------------------------- */
 
 	public function linkPluginPage($links) {
 		array_unshift(
