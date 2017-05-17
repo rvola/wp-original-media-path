@@ -8,12 +8,12 @@ Description: 	Restore the fields to change the url and file upload | <a href="ht
 License:		GPLv3
 License URI:	https://www.gnu.org/licenses/gpl-3.0
 
-Version: 		1.6.1
-Revision:		2016-08-01
+Version: 		2.0.0
+Revision:		2017-05-17
 Creation:		2013-01-06
 
-Author:			RVOLA
-Author URI:		http://rvola.com
+Author:			studio RVOLA
+Author URI:		https://www.rvola.com
 
 Domain Path: /languages/
 Text Domain: wp-original-media-path
@@ -21,7 +21,7 @@ Text Domain: wp-original-media-path
 */
 
 /**
- *	Copyright (C) 2007-2016 studio RVOLA (email: hello@rvola.com)
+ *	Copyright (C) 2007-2017 studio RVOLA (email: hello@rvola.com)
  *
  *	This program is free software; you can redistribute it and/or
  *	modify it under the terms of the GNU General Public License

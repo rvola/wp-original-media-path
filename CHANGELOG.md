@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/rvola/wp-original-media-path/tree/2.0.0) - 2017-05-17
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/1.6.1...2.0.0)
+
+* MINOR / order button options
+* NEW / Check multisite and kick out
+* MINOR / Pear conventions
+* MINOR / Add details for field
+* NEW / Style for hide field in page media
+* NEW / Sanitize field url
+* UPDATED / activate() with new function `clean_slash`& `set_uploadPath`
+* NEW / set_uploadPath
+* NEW / clean_slash
+* REMOVE / upload_path field
+
 ## [1.6.1](https://github.com/rvola/wp-original-media-path/tree/1.6.1) - 2016-08-01
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/1.6.0...1.6.1)
 

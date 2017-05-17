@@ -2,8 +2,8 @@
 Contributors: rvola
 Tags: media, upload, path, subdomain
 Requires at least: 3.5
-Tested up to: 4.6
-Stable tag: 1.6.1
+Tested up to: 4.8
+Stable tag: 2.0.0
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
@@ -14,25 +14,39 @@ There exists a constant wp-config.php, but it does not include sub-domains.
 Once activated, the plugin will add two values ​​in the database, you modify later.
 The plugin is not retroactive for images already uploaded
 
+**This extension is not compatible with WordPress multisite.**
 **Thank you to try to find the solution by yourself or on the forum.**
 **The author of the plug-in is no after-sales service.**
 **Most of the issues have already been addressed.**
 
 == Installation ==
-* Activate the plugin
-* Go to the option page of the plugin to complete the configuration
-* Modify the desired values ​​'Store uploaded files in this folder' and 'full web address for the'.
-* That's it!
+First of all, it is important to back up your website before using this extension. I can not be held liable if you lose content. Thank you.
+
+Here is the installation. Normally, it’s pretty simple. Just enter the URL you want for your uploads directory. Be careful if you use a domain other than your domain, pointing your domains (DNS) to the desired folder.
+
+For example, if I want to have `http://media.domain.com` as my URL for my uploads folder, I need to point DNS `media.domain.com` to the root of my WordPress site.
+Another example: `http://other-domain.com/images`. I have to point my domain to the `images` folder on my WordPress server.
+
+The easiest way to understand how the extension works and only use your current WordPress domain at first. By default, the URL of the uploads folder of WordPress is `http://domain.com/wp-content/uploads`. Try for example to put this in the field: `http://domain.com/media`, then send an image by the usual WordPress media page and normally by magic, WordPress will create the media folder at the root of your WordPress And upload your image to your server.
+
+If your website is blank, you do not have anything else to do. If your site already has images for a while, read on.
+
+Please note that the URL change is never retroactive. This means that if you change the URL of the media folder, the images called in your article, etc. will still call the old URL. Similarly, templates and extensions that use dynamic functions will call the new URL while the items in the uploads folder will still be in the old folder.
+
+The easiest if you want to migrate the URL is to do it in 3 simple steps:
+* 1 - change the field with the new URL
+* 2 - move the contents of your old uploads folder to the location of the new URL. For example, my old folder URL is `http://domain.com/wp-content/uploads` and I now want the images to be `http://domain.com/media`; After changing the field in the options like this: `http://domain.com/media`, I move the contents of the `http://domain.com/wp-content/uploads` folder to the `http://domain.com/media`, so I allow dynamic functions to continue to find the media files in your new folder.
+* 3 - now we need to change, the old image calls `http://domain.com/wp-content/uploads/2016/05/test.jpg` for example that is in the content of WordPress articles. First you have to back up your database, because the operation can be damaging and I can not be held responsible. It is necessary to modify in SQL by a simple Search> Replace.
+There are extensions on WordPress that do the job very well, I think, especially at [Search & Replace](https://fr.wordpress.org/plugins/search-and-replace/).
+Just search for `http://domain.com/wp-content/uploads` and replace it with `http://domain.com/media` which matches the field you entered in step 1.
+
+Normally if you scrupulously follow these steps, you are able to be able to simply change the URL of your uploads folder.
+
+Good continuation and think about adding a review.
 
 == Frequently Asked Questions ==
 
 = How to set my plugin? =
-The first is your file uploads without the domain.
-For example, if your upload folder is at the root of the site and it is called 'my-images' the first field must be filled 'my-images'
-
-The second field is the full URL to the file uploads.
-In the previous example, the field looks like this: 'http://www.siteweb.com/my-images'
-
 = The plugin does it work with a real CDN? =
 Unfortunately not. Because WordPress is able to handle the file uploads directly.
 This plug-in is only used to mount a mirror subdomains on Wordpress installation or change the location of file uploads
@@ -40,7 +54,6 @@ This plug-in is only used to mount a mirror subdomains on Wordpress installation
 = I just set the plug-in, but the images are not displayed =
 1. Check that the path is correct specify
 2. Check that the file was created on the server with the chmod 777 or 755
-3. Visit this page : https://wordpress.org/support/topic/images-not-getting-uploaded-to-subdomain-or-anywhere
 
 = My site is broken =
 * Do not panic!
@@ -52,6 +65,18 @@ We're glad you want to help us improve the WP Original Media Path!
 To help us, go directly into the form of http://wordpress.org/support/plugin/wp-original-media-path plugin and mail us your suggestions.
 
 == Changelog ==
+
+= 2.0.0 | 2017-05-17 =
+* MINOR / order button options
+* NEW / Check multisite and kick out
+* MINOR / Pear conventions
+* MINOR / Add details for field
+* NEW / Style for hide field in page media
+* NEW / Sanitize field url
+* UPDATED / activate() with new function `clean_slash`& `set_uploadPath`
+* NEW / set_uploadPath
+* NEW / clean_slash
+* REMOVE / upload_path field
 
 = 1.6.1 | 2016-08-01 =
 * FIX / Install fields
