@@ -255,6 +255,10 @@ final class WPOMP {
 		$value = $this->clean_slash( $value );
 		$value = esc_url( $value );
 
+		if ( empty( $value ) ) {
+			$value = home_url() . '/wp-content/uploads';
+		}
+
 		//save path automatically
 		if ( get_option( 'wpomp_mode' ) != true ) {
 			$this->set_uploadPath( $value );
