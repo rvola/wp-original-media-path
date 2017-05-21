@@ -48,6 +48,7 @@ final class WPOMP {
 	const NAME = "WP Original Media Path";
 	const I18N = "wp-original-media-path";
 	const SLUG = "wpomp";
+	const VERSION = "2.1.0";
 
 	/*--------------------------------------------------------- */
 
