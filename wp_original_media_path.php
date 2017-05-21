@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: 	WP Original Media Path
-Plugin URI: 	https://wordpress.org/plugins/wp-original-media-path/
+Plugin URI: 	https://github.com/rvola/wp-original-media-path
 
 Description: 	Restore the fields to change the url and file upload | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a> | <a href="https://www.paypal.me/rvola" target="_blank">Donate</a>
 
 License:		GPLv3
 License URI:	https://www.gnu.org/licenses/gpl-3.0
 
-Version: 		2.0.0
-Revision:		2017-05-17
+Version: 		2.1.0
+Revision:		2017-05-21
 Creation:		2013-01-06
 
 Author:			studio RVOLA

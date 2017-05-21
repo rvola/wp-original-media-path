@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/rvola/wp-original-media-path/tree/2.1.0) - 2017-05-21
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.0.0...2.1.0)
+
+* NEW / Donate link
+* MINOR / ajustement readme
+* UPDATED / sanitize_url if empty field
+* NEW / Expert mode with path custom
+* UPDATED / function dynamic field render
+* NEW / style in css file
+* NEW / constante Version
+* NEW / constante SLUG
+
 ## [2.0.0](https://github.com/rvola/wp-original-media-path/tree/2.0.0) - 2017-05-17
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/1.6.1...2.0.0)
 
