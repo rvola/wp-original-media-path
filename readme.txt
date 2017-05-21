@@ -4,7 +4,7 @@ Tags: media, upload, path, subdomain
 Donate link: https://www.paypal.me/rvola
 Requires at least: 3.5
 Tested up to: 4.8
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 
 Displays the fields to change the url and file upload
