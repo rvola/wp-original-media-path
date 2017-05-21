@@ -174,22 +174,27 @@ final class WPOMP {
 			'upload_url_path' => array(
 				'id'             => 'upload_url_path',
 				'title'          => __( 'Full URL path to files' ),
+				'type'   		 => 'text',
 				'description'    => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.' ), '<strong>' . home_url() . '</strong>' ),
 			),
 		);
 
 		foreach( $fields as $id => $field ){
+
+			$field_fonction = 'inputFields_' . $field['type'];
+
 			add_settings_field(
 				$id,
 				$field['title'],
-				array( $this, 'InputFields' ),
+				array( $this, $field_fonction ),
 				'wpomp_pages',
 				'wpomp_section_main',
 				$field
 			);
 		}
 	}
-	public function inputFields( $datafield ) {
+
+	public function inputFields_text( $datafield ) {
 		printf(
 			'<input name="%1$s" type="text" id="%1$s" value="%2$s" class="regular-text code" />',
 			$datafield['id'],
