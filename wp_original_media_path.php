@@ -47,6 +47,7 @@ final class WPOMP {
 
 	const NAME = "WP Original Media Path";
 	const I18N = "wp-original-media-path";
+	const SLUG = "wpomp";
 
 	/*--------------------------------------------------------- */
 
@@ -143,7 +144,7 @@ final class WPOMP {
 			self::NAME,
 			self::NAME,
 			'manage_options',
-			'wpomp-options',
+			self::SLUG . '-options',
 			array( $this, 'optionsPages' )
 		);
 	}
