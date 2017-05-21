@@ -2,3 +2,7 @@ body.options-media-php .form-table:nth-of-type(2) tr:nth-of-type(1),
 body.options-media-php .form-table:nth-of-type(2) tr:nth-of-type(2){
 	display:none
 }
+
+body.settings_page_wpomp-options .form-table tr:nth-of-type(2) {
+	display:none
+}

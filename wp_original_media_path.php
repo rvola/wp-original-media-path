@@ -90,6 +90,8 @@ final class WPOMP {
 		add_filter( "plugin_action_links_{$plugin_file}", array( $this, 'linkPluginPage' ), 10, 1 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'assetStyle' ), 10, 1 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'assetScript' ), 10, 1 );
+
 		add_action( 'admin_menu', array( $this, 'linkSidebar' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerSections' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerFields' ), 10 );
@@ -146,10 +148,17 @@ final class WPOMP {
 	/*--------------------------------------------------------- */
 
 	public function assetStyle( $hook ) {
-		if ( $hook == 'options-media.php' ) {
+		if ( $hook == 'options-media.php' || $hook == 'settings_page_' . self::SLUG . '-options' ) {
 			wp_enqueue_style( self::SLUG, plugins_url( 'assets/' . self::SLUG . '.css', __FILE__ ), null, self::VERSION, 'all' );
 		}
 	}
+	public function assetScript( $hook ) {
+		if ( $hook == 'settings_page_' . self::SLUG . '-options' ) {
+			wp_enqueue_script( self::SLUG, plugins_url( 'assets/' . self::SLUG . '.js', __FILE__ ), array( 'jquery' ), self::VERSION, true );
+		}
+	}
+	/*--------------------------------------------------------- */
+
 	public function optionsPages() {
 		include( dirname( __FILE__ ) . '/wpomp-options.php' );
 	}
@@ -165,12 +174,32 @@ final class WPOMP {
 	public function registerFields() {
 		register_setting(
 			'wpomp_fields',
+			'wpomp_mode'
+		);
+		register_setting(
+			'wpomp_fields',
+			'upload_path'
+		);
+		register_setting(
+			'wpomp_fields',
 			'upload_url_path',
 			array( $this, 'sanitize_url' )
 		);
 	}
 	public function addFields() {
 		$fields = array(
+			'wpomp_mode'      => array(
+				'id'             => 'wpomp_mode',
+				'title'          => __( 'Expert mode' ),
+				'type'   		 => 'checkbox',
+				'description'    => __( 'Activate that if you are aware of what you are doing.' ),
+			),
+			'upload_path'     => array(
+				'id'             => 'upload_path',
+				'type'   		 => 'text',
+				'title'          => __( 'Store uploads in this folder' ),
+				'description'    => sprintf( __( 'Default is %s' ), '<code>wp-content/uploads</code>' ),
+			),
 			'upload_url_path' => array(
 				'id'             => 'upload_url_path',
 				'title'          => __( 'Full URL path to files' ),
@@ -206,6 +235,19 @@ final class WPOMP {
 			$datafield['description']
 		);
 	}
+	public function inputFields_checkbox( $datafield ) {
+		printf(
+			'<input name="%1$s" type="checkbox" id="%1$s" value="1" %2$s /> %3$s',
+			$datafield['id'],
+			checked( 1, get_option( $datafield['id'] ), false ),
+			sprintf(
+				'<span class="description">%s</span>',
+				$datafield['description']
+			)
+		);
+
+
+	}
 
 	/*--------------------------------------------------------- */
 
@@ -214,7 +256,10 @@ final class WPOMP {
 		$value = esc_url( $value );
 
 		//save path automatically
-		$this->set_uploadPath( $value );
+		if ( get_option( 'wpomp_mode' ) != true ) {
+			$this->set_uploadPath( $value );
+		}
+
 
 		return $value;
 	}
