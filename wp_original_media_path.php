@@ -3,7 +3,7 @@
 Plugin Name: 	WP Original Media Path
 Plugin URI: 	https://wordpress.org/plugins/wp-original-media-path/
 
-Description: 	Restore the fields to change the url and file upload | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a>
+Description: 	Restore the fields to change the url and file upload | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a> | <a href="https://www.paypal.me/rvola" target="_blank">Donate</a>
 
 License:		GPLv3
 License URI:	https://www.gnu.org/licenses/gpl-3.0

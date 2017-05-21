@@ -1,6 +1,7 @@
 === WP Original Media Path ===
 Contributors: rvola
 Tags: media, upload, path, subdomain
+Donate link: https://www.paypal.me/rvola
 Requires at least: 3.5
 Tested up to: 4.8
 Stable tag: 2.0.0
