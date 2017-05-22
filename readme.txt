@@ -74,6 +74,13 @@ The GIT repository is available here [https://github.com/rvola/wp-original-media
 
 == Changelog ==
 
+= 2.1.1 | 2017-05-22 =
+* MINOR / Explanatory text
+* FIX / Load correctly gettext
+* FIX / Link donate + I18n
+* MINOR / changelog for Wordpress repository
+* Bump version Wordpress Repository
+
 = 2.1.0 | 2017-05-21 =
 * NEW / Donate link
 * MINOR / ajustement readme

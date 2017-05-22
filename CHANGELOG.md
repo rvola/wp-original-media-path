@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.1](https://github.com/rvola/wp-original-media-path/tree/2.1.1) - 2017-05-22
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.1.0...2.1.1)
+
+* MINOR / Explanatory text
+* FIX / Load correctly gettext
+* FIX / Link donate + I18n
+* MINOR / changelog for Wordpress repository
+* Bump version Wordpress Repository
+
 ## [2.1.0](https://github.com/rvola/wp-original-media-path/tree/2.1.0) - 2017-05-21
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.0.0...2.1.0)
 

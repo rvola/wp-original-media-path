@@ -8,8 +8,8 @@ Description: 	Change the location for the uploads folder for WordPress | <a href
 License:		GPLv3
 License URI:	https://www.gnu.org/licenses/gpl-3.0
 
-Version: 		2.1.0
-Revision:		2017-05-21
+Version: 		2.1.1
+Revision:		2017-05-22
 Creation:		2013-01-06
 
 Author:			studio RVOLA
