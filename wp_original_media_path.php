@@ -103,7 +103,7 @@ final class WPOMP {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			deactivate_plugins( plugin_basename( __FILE__ ) );
 			wp_die(
-				__( 'This plugin is not compatible with WordPres multisite. Sorry for the inconvenience.', self::I18N ),
+				__( 'This plugin is not compatible with WordPress multisite. Sorry for the inconvenience.', self::I18N ),
 				sprintf (
 					__( 'Error : %s', self::I18N ),
 					self::NAME
