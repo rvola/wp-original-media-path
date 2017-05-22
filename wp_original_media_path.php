@@ -3,7 +3,7 @@
 Plugin Name: 	WP Original Media Path
 Plugin URI: 	https://github.com/rvola/wp-original-media-path
 
-Description: 	Restore the fields to change the url and file upload | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a> | <a href="https://www.paypal.me/rvola" target="_blank">Donate</a>
+Description: 	Change the location for the uploads folder for WordPress | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a> | <a href="https://www.paypal.me/rvola" target="_blank">Donate</a>
 
 License:		GPLv3
 License URI:	https://www.gnu.org/licenses/gpl-3.0
@@ -103,7 +103,7 @@ final class WPOMP {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			deactivate_plugins( plugin_basename( __FILE__ ) );
 			wp_die(
-				__( 'This plugin is not multisite. Sorry for the inconvenience.', self::I18N ),
+				__( 'This plugin is not compatible with WordPres multisite. Sorry for the inconvenience.', self::I18N ),
 				sprintf (
 					__( 'Error : %s', self::I18N ),
 					self::NAME

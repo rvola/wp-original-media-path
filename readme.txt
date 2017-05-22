@@ -7,18 +7,18 @@ Tested up to: 4.8
 Stable tag: 2.1.0
 License: GPLv2 or later
 
-Displays the fields to change the url and file upload
+Change the location for the uploads folder for WordPress
 
 == Description ==
-Wordpress has changed the media page, removing the two fields to define the location and the sub-field of media.
+WordPress has changed the media page, removing the two fields to define the location and the sub-field of media.
 There exists a constant wp-config.php, but it does not include sub-domains.
 Once activated, the plugin will add two values ​​in the database, you modify later.
 The plugin is not retroactive for images already uploaded.
-Follow the [installation instructions](https://wordpress.org/plugins/wp-original-media-path/#installation) to migrate your old images.
+Follow the [installation instructions](https://wordpress.org/plugins/wp-original-media-path/installation) to migrate your old images.
 
 * **This extension is not compatible with WordPress multisite.**
 * **Thank you to try to find the solution by yourself or on the forum.**
-* **The author of the plug-in is no after-sales service.**
+* **The author of the plugin is no after-sales service.**
 * **Most of the issues have already been addressed.**
 
 == Installation ==
@@ -38,7 +38,7 @@ Please note that the URL change is never retroactive. This means that if you cha
 The easiest if you want to migrate the URL is to do it in 3 simple steps:
 
 = Step 1 =
-Change the field with the new URL
+Change the field with the new URL.
 
 = Step 2 =
 Move the contents of your old uploads folder to the location of the new URL. For example, my old folder URL is `http://domain.com/wp-content/uploads` and I now want the images to be `http://domain.com/media`; After changing the field in the options like this: `http://domain.com/media`, I move the contents of the `http://domain.com/wp-content/uploads` folder to the `http://domain.com/media`, so I allow dynamic functions to continue to find the media files in your new folder.
@@ -57,20 +57,20 @@ Good continuation and think about adding a review.
 = How to set my plugin? =
 = The plugin does it work with a real CDN? =
 Unfortunately not. Because WordPress is able to handle the file uploads directly.
-This plug-in is only used to mount a mirror subdomains on Wordpress installation or change the location of file uploads
+This plugin is only used to mount a mirror subdomains on Wordpress installation or change the location of file uploads.
 
-= I just set the plug-in, but the images are not displayed =
-1. Check that the path is correct specify
-2. Check that the file was created on the server with the chmod 777 or 755
+= I just set the plugin, but the images are not displayed =
+1. Check that the path is correct specify.
+2. Check that the file was created on the server with the chmod 777 or 755.
 
 = My site is broken =
-* Do not panic!
-* Refer to the help for configuring media fields.
-* You can always follow the uninstallation procedure if you want to reverse
+1. Do not panic!
+2. Refer to the help for configuring media fields.
+3. You can always follow the uninstallation procedure if you want to reverse.
 
 = I want to make suggestions =
-We're glad you want to help us improve the WP Original Media Path!
-The GIT repository is available here https://github.com/rvola/wp-original-media-path
+We’re glad you want to help us improve the WP Original Media Path!
+The GIT repository is available here [https://github.com/rvola/wp-original-media-path](https://github.com/rvola/wp-original-media-path)
 
 == Changelog ==
 
@@ -117,8 +117,6 @@ The GIT repository is available here https://github.com/rvola/wp-original-media-
 = 1.5.1 | 2015-11-19 =
 * Check Wordpress 4.4
 * Update readme
-
-= 1.5.1 | 2015-10-14 =
 * New File POT
 * Github link
 
@@ -139,7 +137,7 @@ The GIT repository is available here https://github.com/rvola/wp-original-media-
 
 = 1.3.0 | 2013-07-18 =
 * Page options
-* Possibility to disable the plug-in settings without deleting
+* Possibility to disable the plugin settings without deleting
 * Established translations
 * Update Installation and FAQ
 

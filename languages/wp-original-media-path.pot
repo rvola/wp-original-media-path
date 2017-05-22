@@ -3,10 +3,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Original Media Path 2.0\n"
+"Project-Id-Version: WP Original Media Path 2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-original-media-"
 "path\n"
-"POT-Creation-Date: 2017-05-21 14:09+0200\n"
+"POT-Creation-Date: 2017-05-22 13:43+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,9 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: wp_original_media_path.php:106
-msgid "This plugin is not multisite. Sorry for the inconvenience."
+msgid ""
+"This plugin is not compatible with WordPres multisite. Sorry for the "
+"inconvenience."
 msgstr ""
 
 #: wp_original_media_path.php:108
@@ -75,4 +77,8 @@ msgstr ""
 
 #: wpomp-options.php:6
 msgid "FAQ"
+msgstr ""
+
+#: wpomp-options.php:8
+msgid "Donate"
 msgstr ""
