@@ -4,7 +4,7 @@ Tags: media, upload, path, subdomain
 Donate link: https://www.paypal.me/rvola
 Requires at least: 3.5
 Tested up to: 4.8
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPLv2 or later
 
 Change the location for the uploads folder for WordPress
