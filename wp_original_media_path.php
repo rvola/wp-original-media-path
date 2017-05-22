@@ -103,9 +103,9 @@ final class WPOMP {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			deactivate_plugins( plugin_basename( __FILE__ ) );
 			wp_die(
-				__( 'This plugin is not multisite. Sorry for the inconvenience.' ),
+				__( 'This plugin is not multisite. Sorry for the inconvenience.', self::I18N ),
 				sprintf (
-					__( 'Error : %s' ),
+					__( 'Error : %s', self::I18N ),
 					self::NAME
 				),
 				array(
@@ -129,7 +129,7 @@ final class WPOMP {
 			sprintf(
 				'<a href="%1$s">%2$s</a>',
 				admin_url( 'admin.php?page=wpomp-options' ),
-				__( 'Settings' )
+				__( 'Settings', self::I18N )
 			)
 		);
 		return $links;
@@ -166,7 +166,7 @@ final class WPOMP {
 	public function registerSections() {
 		add_settings_section(
 			'wpomp_section_main',
-			__( 'Uploading Files' ),
+			__( 'Uploading Files', self::I18N ),
 			null,
 			'wpomp_pages'
 		);
@@ -190,21 +190,21 @@ final class WPOMP {
 		$fields = array(
 			'wpomp_mode'      => array(
 				'id'             => 'wpomp_mode',
-				'title'          => __( 'Expert mode' ),
+				'title'          => __( 'Expert mode', self::I18N ),
 				'type'   		 => 'checkbox',
-				'description'    => __( 'Activate that if you are aware of what you are doing.' ),
+				'description'    => __( 'Activate that if you are aware of what you are doing.', self::I18N ),
 			),
 			'upload_path'     => array(
 				'id'             => 'upload_path',
 				'type'   		 => 'text',
-				'title'          => __( 'Store uploads in this folder' ),
-				'description'    => sprintf( __( 'Default is %s' ), '<code>wp-content/uploads</code>' ),
+				'title'          => __( 'Store uploads in this folder', self::I18N ),
+				'description'    => sprintf( __( 'Default is %s', self::I18N ), '<code>wp-content/uploads</code>' ),
 			),
 			'upload_url_path' => array(
 				'id'             => 'upload_url_path',
-				'title'          => __( 'Full URL path to files' ),
+				'title'          => __( 'Full URL path to files', self::I18N ),
 				'type'   		 => 'text',
-				'description'    => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.' ), '<strong>' . home_url() . '</strong>' ),
+				'description'    => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.', self::I18N ), '<strong>' . home_url() . '</strong>' ),
 			),
 		);
 
