@@ -23,11 +23,8 @@ Requires PHP:           5.3
 
 */
 
-
+namespace RVOLA;
 if( ! defined( 'ABSPATH' ) ) exit;
-
-register_activation_hook( __FILE__, array( 'WPOMP', 'activate' ) );
-add_action( 'plugins_loaded', array( 'WPOMP', 'load' ), 10 );
 
 final class WPOMP {
 
@@ -280,3 +277,6 @@ final class WPOMP {
 	}
 
 }
+
+add_action( 'plugins_loaded', array( 'RVOLA\WPOMP', 'load' ), 10 );
+register_activation_hook( __FILE__, array( 'RVOLA\WPOMP', 'activate' ) );
