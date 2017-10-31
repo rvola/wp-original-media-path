@@ -82,8 +82,7 @@ final class WPOMP {
 		add_action( 'init', array( $this, 'loadTextDomain' ), 10 );
 		add_filter( "plugin_action_links_{$plugin_file}", array( $this, 'linkPluginPage' ), 10, 1 );
 
-		add_action( 'admin_enqueue_scripts', array( $this, 'assetStyle' ), 10, 1 );
-		add_action( 'admin_enqueue_scripts', array( $this, 'assetScript' ), 10, 1 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ), 10, 1 );
 
 		add_action( 'admin_menu', array( $this, 'linkSidebar' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerSections' ), 10 );
@@ -148,15 +147,17 @@ final class WPOMP {
 	}
 
 	/*--------------------------------------------------------- */
+	public function assets( $hook ) {
 
-	public function assetStyle( $hook ) {
-		if ( $hook == 'options-media.php' || $hook == 'settings_page_' . self::SLUG . '-options' ) {
-			wp_enqueue_style( self::SLUG, plugins_url( 'assets/' . self::SLUG . '.css', __FILE__ ), null, self::VERSION, 'all' );
-		}
-	}
-	public function assetScript( $hook ) {
+		/*script*/
 		if ( $hook == 'settings_page_' . self::SLUG . '-options' ) {
-			wp_enqueue_script( self::SLUG, plugins_url( 'assets/' . self::SLUG . '.js', __FILE__ ), array( 'jquery' ), self::VERSION, true );
+			wp_enqueue_script( self::SLUG, plugins_url( 'assets/' . self::SLUG . '.js', __FILE__ ), array( 'jquery' ),
+				self::VERSION, true );
+		}
+		/*style*/
+		if ( $hook == 'options-media.php' || $hook == 'settings_page_' . self::SLUG . '-options' ) {
+			wp_enqueue_style( self::SLUG, plugins_url( 'assets/' . self::SLUG . '.css', __FILE__ ), null, self::VERSION,
+				'all' );
 		}
 	}
 	/*--------------------------------------------------------- */
