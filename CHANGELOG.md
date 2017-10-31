@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.2.0](https://github.com/rvola/wp-original-media-path/tree/2.2.0) - 2017-10-31
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.1.1...2.2.0)
+
+* Minor spaces and clean
+* Refactor activation methode with new setter
+* Refactor method set value
+* Refactor slug link admin options
+* Refactor Pear conventions checkMultisite
+* Refactor link plugin meta
+* Rename method linkSidebar  > addMenu
+* Rename method linkPluginPage  > pluginLinkPage
+* Rename method loadTextDomain > loadLanguages
+* Refactor Fields
+* New namespace for class
+* New requirement version (PHP, WP)
+* Clean licence in php file
+* REFACTOR / merge method assets (script, style)
+* REFACTOR / change name singleton method
+* Link page options printf()
+* MOVE / page options in folder
+
+
 ## [2.1.1](https://github.com/rvola/wp-original-media-path/tree/2.1.1) - 2017-05-22
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.1.0...2.1.1)
 

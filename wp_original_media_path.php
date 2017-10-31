@@ -1,26 +1,26 @@
 <?php
 /*
-Plugin Name: 	WP Original Media Path
-Plugin URI: 	https://github.com/rvola/wp-original-media-path
+Plugin Name:            WP Original Media Path
+Plugin URI:             https://github.com/rvola/wp-original-media-path
 
 Description:            Change the location for the uploads folder for WordPress
 
-License:		GPLv3
-License URI:	https://www.gnu.org/licenses/gpl-3.0
+Version:                2.2.0
+Revision:               2017-10-31
+Creation:               2013-01-06
 
-Version: 		2.1.1
-Revision:		2017-05-22
-Creation:		2013-01-06
+Author:                 studio RVOLA
+Author URI:             https://www.rvola.com
 
-Author:			studio RVOLA
-Author URI:		https://www.rvola.com
+Text Domain:            wp-original-media-path
+Domain Path:            /languages/
 
-Domain Path: /languages/
-Text Domain: wp-original-media-path
 Requires at least:      3.5
 Tested up to:           4.9
 Requires PHP:           5.3
 
+License:		        GPLv3
+License URI:	        https://www.gnu.org/licenses/gpl-3.0
 */
 
 namespace RVOLA;
@@ -34,7 +34,7 @@ final class WPOMP {
 	const NAME = "WP Original Media Path";
 	const I18N = "wp-original-media-path";
 	const SLUG = "wpomp";
-	const VERSION = "2.1.0";
+	const VERSION = "2.2.0";
 
 	private static $singleton = null;
 

@@ -1,11 +1,12 @@
 === WP Original Media Path ===
-Contributors: rvola
-Tags: media, upload, path, subdomain
 Donate link: https://www.paypal.me/rvola
-Requires at least: 3.5
-Tested up to: 4.8
-Stable tag: 2.1.1
-License: GPLv2 or later
+Tags: media, upload, path, subdomain
+Requires PHP: 5.3
+Requires at least: 4.0
+Tested up to: 4.9
+Stable tag: 2.2.0
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Change the location for the uploads folder for WordPress
 
@@ -20,6 +21,8 @@ Follow the [installation instructions](https://wordpress.org/plugins/wp-original
 * **Thank you to try to find the solution by yourself or on the forum.**
 * **The author of the plugin is no after-sales service.**
 * **Most of the issues have already been addressed.**
+
+[**GitHub**](https://github.com/rvola/wp-original-media-path) | [**Donate**](https://www.paypal.me/rvola)
 
 == Installation ==
 First of all, it is important to back up your website before using this extension. I can not be held liable if you lose content. Thank you.
@@ -54,7 +57,6 @@ Good continuation and think about adding a review.
 
 == Frequently Asked Questions ==
 
-= How to set my plugin? =
 = The plugin does it work with a real CDN? =
 Unfortunately not. Because WordPress is able to handle the file uploads directly.
 This plugin is only used to mount a mirror subdomains on Wordpress installation or change the location of file uploads.
@@ -73,6 +75,25 @@ We’re glad you want to help us improve the WP Original Media Path!
 The GIT repository is available here [https://github.com/rvola/wp-original-media-path](https://github.com/rvola/wp-original-media-path)
 
 == Changelog ==
+
+= 2.2.0 | 2017-10-31 =
+* Minor spaces and clean
+* Refactor activation methode with new setter
+* Refactor method set value
+* Refactor slug link admin options
+* Refactor Pear conventions checkMultisite
+* Refactor link plugin meta
+* Rename method linkSidebar  > addMenu
+* Rename method linkPluginPage  > pluginLinkPage
+* Rename method loadTextDomain > loadLanguages
+* Refactor Fields
+* New namespace for class
+* New requirement version (PHP, WP)
+* Clean licence in php file
+* REFACTOR / merge method assets (script, style)
+* REFACTOR / change name singleton method
+* Link page options printf()
+* MOVE / page options in folder
 
 = 2.1.1 | 2017-05-22 =
 * MINOR / Explanatory text

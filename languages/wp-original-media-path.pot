@@ -1,20 +1,16 @@
-# Copyright (C) 2015 WP Original Media Path
-# This file is distributed under the same license as the WP Original Media Path package.
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Original Media Path 2.1\n"
+"Project-Id-Version: WP Original Media Path 2.2.X\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-original-media-"
 "path\n"
-"POT-Creation-Date: 2017-05-22 13:43+0200\n"
+"POT-Creation-Date: 2017-10-31 11:04+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: \n"
-"X-Generator: Poedit 2.0\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
@@ -22,63 +18,63 @@ msgstr ""
 "Last-Translator: \n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: wp_original_media_path.php:106
+#: pages/options.php:10 wp_original_media_path.php:180
+msgid "FAQ"
+msgstr ""
+
+#: pages/options.php:15 wp_original_media_path.php:185
+msgid "How to Configure"
+msgstr ""
+
+#: pages/options.php:24 wp_original_media_path.php:190
+msgid "Donate"
+msgstr ""
+
+#: wp_original_media_path.php:64
 msgid ""
-"This plugin is not compatible with WordPres multisite. Sorry for the "
+"This plugin is not compatible with WordPress multisite. Sorry for the "
 "inconvenience."
 msgstr ""
 
-#: wp_original_media_path.php:108
+#: wp_original_media_path.php:66
 #, php-format
 msgid "Error : %s"
 msgstr ""
 
-#: wp_original_media_path.php:132
+#: wp_original_media_path.php:164
 msgid "Settings"
 msgstr ""
 
-#: wp_original_media_path.php:169
+#: wp_original_media_path.php:237
 msgid "Uploading Files"
 msgstr ""
 
-#: wp_original_media_path.php:193
+#: wp_original_media_path.php:266
 msgid "Expert mode"
 msgstr ""
 
-#: wp_original_media_path.php:195
+#: wp_original_media_path.php:269
 msgid "Activate that if you are aware of what you are doing."
 msgstr ""
 
-#: wp_original_media_path.php:200
+#: wp_original_media_path.php:275
 msgid "Store uploads in this folder"
 msgstr ""
 
-#: wp_original_media_path.php:201
+#: wp_original_media_path.php:276
 #, php-format
 msgid "Default is %s"
 msgstr ""
 
-#: wp_original_media_path.php:205
+#: wp_original_media_path.php:281
 msgid "Full URL path to files"
 msgstr ""
 
-#: wp_original_media_path.php:207
+#: wp_original_media_path.php:284
 #, php-format
 msgid ""
 "Simply specify the url for your upload folder. Be careful, if you want a "
 "domain other than %s, make sure to point the domain (DNS) to the desired "
 "folder on your current server. The plugin can not upload to any other server "
 "than this one."
-msgstr ""
-
-#: wpomp-options.php:5
-msgid "How to Configure"
-msgstr ""
-
-#: wpomp-options.php:6
-msgid "FAQ"
-msgstr ""
-
-#: wpomp-options.php:8
-msgid "Donate"
 msgstr ""
