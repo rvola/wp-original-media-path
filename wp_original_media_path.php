@@ -35,23 +35,6 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
-	public static function activate() {
-		$upload_path	 = get_option( 'upload_path' );
-		$upload_url_path = get_option( 'upload_url_path' );
-
-		if (
-			   isset( $upload_path ) && empty( $upload_path)
-			&& isset( $upload_url_path ) && empty( $upload_url_path)
-		){
-			$upload_dir = wp_upload_dir();
-			$default_url  = self::clean_slash( $upload_dir['baseurl'] );
-
-			self::set_uploadPath( $default_url );
-			update_option( 'upload_url_path', $default_url, true );
-
-		}
-
-	}
 
 	/*--------------------------------------------------------- */
 	private static $singleton = null;
@@ -102,6 +85,22 @@ final class WPOMP {
 		return self::$singleton;
 	}
 
+	public static function activation() {
+
+		$upload_path     = get_option( 'upload_path' );
+		$upload_url_path = get_option( 'upload_url_path' );
+
+		if (
+			isset( $upload_path ) && empty( $upload_path )
+			&& isset( $upload_url_path ) && empty( $upload_url_path )
+		) {
+			$upload_dir = wp_upload_dir();
+			self::setPath( $upload_dir['baseurl'] );
+			self::setURL( $upload_dir['baseurl'] );
+
+		}
+
+	}
 
 	public static function setPath( $url ) {
 
@@ -333,4 +332,4 @@ final class WPOMP {
 }
 
 add_action( 'plugins_loaded', array( 'RVOLA\WPOMP', 'load' ), 10 );
-register_activation_hook( __FILE__, array( 'RVOLA\WPOMP', 'activate' ) );
+register_activation_hook( __FILE__, array( 'RVOLA\WPOMP', 'activation' ) );
