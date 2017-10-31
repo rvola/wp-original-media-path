@@ -1,4 +1,5 @@
 === WP Original Media Path ===
+Contributors: rvola
 Donate link: https://www.paypal.me/rvola
 Tags: media, upload, path, subdomain
 Requires PHP: 5.3
