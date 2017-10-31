@@ -66,7 +66,7 @@ final class WPOMP {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ), 10, 1 );
 
-		add_action( 'admin_menu', array( $this, 'linkSidebar' ), 10 );
+		add_action( 'admin_menu', array( $this, 'addMenu' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerSections' ), 10 );
 		add_action( 'admin_init', array( $this, 'registerFields' ), 10 );
 		add_action( 'admin_init', array( $this, 'addFields' ), 10 );
@@ -118,7 +118,8 @@ final class WPOMP {
 		);
 		return $links;
 	}
-	public function linkSidebar() {
+	public function addMenu() {
+
 		add_submenu_page(
 			'options-general.php',
 			self::NAME,
