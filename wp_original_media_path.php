@@ -58,7 +58,7 @@ final class WPOMP {
 
 	public function __construct() {
 
-		$this->check_multisite();
+		$this->checkMultisite();
 
 		add_action( 'init', array( $this, 'loadLanguages' ), 10 );
 
@@ -73,13 +73,14 @@ final class WPOMP {
 		add_action( 'admin_init', array( $this, 'addFields' ), 10 );
 	}
 
-	private function check_multisite() {
+	private function checkMultisite() {
+
 		if ( is_multisite() ) {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			deactivate_plugins( plugin_basename( __FILE__ ) );
 			wp_die(
 				__( 'This plugin is not compatible with WordPress multisite. Sorry for the inconvenience.', self::I18N ),
-				sprintf (
+				sprintf(
 					__( 'Error : %s', self::I18N ),
 					self::NAME
 				),
