@@ -3,7 +3,7 @@
 Plugin Name: 	WP Original Media Path
 Plugin URI: 	https://github.com/rvola/wp-original-media-path
 
-Description: 	Change the location for the uploads folder for WordPress | <a href="http://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank">FAQ</a> | <a href="http://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank">How to Configure</a> | <a href="https://www.paypal.me/rvola" target="_blank">Donate</a>
+Description:            Change the location for the uploads folder for WordPress
 
 License:		GPLv3
 License URI:	https://www.gnu.org/licenses/gpl-3.0
@@ -63,6 +63,7 @@ final class WPOMP {
 		add_action( 'init', array( $this, 'loadLanguages' ), 10 );
 
 		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'pluginLinkPage' ), 10, 1 );
+		add_filter( 'plugin_row_meta', array( $this, 'pluginRowMeta' ), 10, 2 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ), 10, 1 );
 
@@ -118,6 +119,37 @@ final class WPOMP {
 		);
 		return $links;
 	}
+	public function pluginRowMeta( $links, $file ) {
+
+		if ( $file === plugin_basename( __FILE__ ) ) {
+
+			array_push(
+				$links,
+				sprintf(
+					'<a href="%1$s" target="_blank">%2$s</a>',
+					'http://wordpress.org/plugins/wp-original-media-path/faq/',
+					__( 'FAQ', self::I18N )
+				),
+				sprintf(
+					'<a href="%1$s" target="_blank">%2$s</a>',
+					'http://wordpress.org/plugins/wp-original-media-path/installation/',
+					__( 'How to Configure', self::I18N )
+				),
+				sprintf(
+					'<a href="%1$s" target="_blank">%2$s</a>',
+					'https://www.paypal.me/rvola',
+					__( 'Donate', self::I18N )
+				),
+				sprintf(
+					'<a href="%1$s" target="_blank">GitHub</a>',
+					'https://github.com/rvola/wp-original-media-path'
+				)
+			);
+		}
+
+		return $links;
+	}
+
 	public function addMenu() {
 
 		add_submenu_page(
