@@ -102,6 +102,57 @@ final class WPOMP {
 		return self::$singleton;
 	}
 
+
+	public static function setPath( $url ) {
+
+		$value = self::cleanValue( $url );
+
+		if ( strpos( $value, home_url() ) !== false ) {
+			$value = str_replace( home_url(), '', $value );
+		} else {
+			$path = parse_url( $value );
+			if ( isset( $path['path'] ) ) {
+				$value = $path['path'];
+			} else {
+				$value = null;
+			}
+		}
+
+		$value = self::cleanValue( $value );
+		update_option( 'upload_path', $value, true );
+	}
+
+	public static function cleanValue( $value ) {
+
+		$value = strtolower( $value );
+		$value = remove_accents( $value );
+		$value = preg_replace( '/[^a-z0-9-_:\.\/]/', '', $value );
+		$value = rtrim( $value, '/\\' );
+		$value = trim( $value, '/\\' );
+
+		return $value;
+	}
+
+	public static function setURL( $url ) {
+
+		update_option( 'upload_url_path', $url, true );
+	}
+
+	public static function autoFill( $url ) {
+
+		$value = self::cleanValue( $url );
+		$value = esc_url( $value );
+
+		if ( empty( $value ) ) {
+			$value = home_url() . '/wp-content/uploads';
+		}
+		if ( get_option( 'wpomp_mode' ) != true ) {
+			self::setPath( $value );
+		}
+
+		return $value;
+	}
+
 	public function loadLanguages() {
 
 		load_plugin_textdomain( self::I18N, false, dirname( __FILE__ ) . '/languages' );
@@ -199,12 +250,13 @@ final class WPOMP {
 		);
 		register_setting(
 			'wpomp_fields',
-			'upload_path'
+			'upload_path',
+			array( $this, 'cleanValue' )
 		);
 		register_setting(
 			'wpomp_fields',
 			'upload_url_path',
-			array( $this, 'sanitize_url' )
+			array( $this, 'autoFill' )
 		);
 	}
 	public function addFields() {
@@ -276,47 +328,6 @@ final class WPOMP {
 			)
 		);
 
-
-	}
-
-	/*--------------------------------------------------------- */
-
-	public function sanitize_url( $value ) {
-		$value = $this->clean_slash( $value );
-		$value = esc_url( $value );
-
-		if ( empty( $value ) ) {
-			$value = home_url() . '/wp-content/uploads';
-		}
-
-		//save path automatically
-		if ( get_option( 'wpomp_mode' ) != true ) {
-			$this->set_uploadPath( $value );
-		}
-
-
-		return $value;
-	}
-	private static function clean_slash( $value ) {
-		$value = rtrim( $value, '/\\' );
-		$value = trim( $value, '/\\' );
-		return $value;
-	}
-
-	/*--------------------------------------------------------- */
-
-	private static function set_uploadPath( $url ) {
-		$value = null;
-		if ( strpos( $url, home_url() ) !== false ) {
-			$value = str_replace( home_url(), '', $url );
-		} else {
-			$path = parse_url( $url );
-			if ( isset( $path['path'] ) ) {
-				$value = $path['path'];
-			}
-		}
-		$value = self::clean_slash( $value );
-		update_option( 'upload_path', $value, true );
 	}
 
 }
