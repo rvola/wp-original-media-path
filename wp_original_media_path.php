@@ -178,26 +178,32 @@ final class WPOMP {
 			'wpomp_mode'      => array(
 				'id'             => 'wpomp_mode',
 				'title'          => __( 'Expert mode', self::I18N ),
-				'type'   		 => 'checkbox',
 				'description'    => __( 'Activate that if you are aware of what you are doing.', self::I18N ),
+				'type'        => 'checkbox',
+				'method'      => 'checkbox',
 			),
 			'upload_path'     => array(
-				'id'             => 'upload_path',
-				'type'   		 => 'text',
-				'title'          => __( 'Store uploads in this folder', self::I18N ),
-				'description'    => sprintf( __( 'Default is %s', self::I18N ), '<code>wp-content/uploads</code>' ),
+				'id'          => 'upload_path',
+				'type'        => 'text',
+				'method'      => 'text',
+				'title'       => __( 'Store uploads in this folder', self::I18N ),
+				'description' => sprintf( __( 'Default is %s', self::I18N ), '<code>wp-content/uploads</code>' ),
+				'placeholder' => '',
 			),
 			'upload_url_path' => array(
-				'id'             => 'upload_url_path',
-				'title'          => __( 'Full URL path to files', self::I18N ),
-				'type'   		 => 'text',
-				'description'    => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.', self::I18N ), '<strong>' . home_url() . '</strong>' ),
+				'id'          => 'upload_url_path',
+				'title'       => __( 'Full URL path to files', self::I18N ),
+				'type'        => 'url',
+				'method'      => 'text',
+				'description' => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.',
+					self::I18N ), '<strong>' . home_url() . '</strong>' ),
+				'placeholder' => 'http://'
 			),
 		);
 
 		foreach( $fields as $id => $field ){
 
-			$field_fonction = 'inputFields_' . $field['type'];
+			$field_fonction = 'inputFields' . ucfirst( $field['method'] );
 
 			add_settings_field(
 				$id,
@@ -210,11 +216,13 @@ final class WPOMP {
 		}
 	}
 
-	public function inputFields_text( $datafield ) {
+	public function inputFieldsText( $datafield ) {
 		printf(
-			'<input name="%1$s" type="text" id="%1$s" value="%2$s" class="regular-text code" />',
+			'<input name="%1$s" type="%2$s" id="%1$s" value="%3$s" class="regular-text code" placeholder="%4$s"/>',
 			$datafield['id'],
-			get_option( $datafield['id'] )
+			$datafield['type'],
+			get_option( $datafield['id'] ),
+			$datafield['placeholder']
 		);
 
 		printf(
@@ -222,7 +230,8 @@ final class WPOMP {
 			$datafield['description']
 		);
 	}
-	public function inputFields_checkbox( $datafield ) {
+
+	public function inputFieldsCheckbox( $datafield ) {
 		printf(
 			'<input name="%1$s" type="checkbox" id="%1$s" value="1" %2$s /> %3$s',
 			$datafield['id'],
