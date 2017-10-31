@@ -8,10 +8,10 @@
 		<a href="https://paypal.me/rvola" target="_blank" class="button button-primary"><?php _e( 'Donate', self::I18N );?></a>
 	</p>
 	<form method="post" action="options.php">
-	<?php
+		<?php
 		settings_fields( 'wpomp_fields' );
 		do_settings_sections( 'wpomp_pages' );
 		submit_button();
-	?>
+		?>
 	</form>
 </div>

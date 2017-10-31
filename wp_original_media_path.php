@@ -160,7 +160,8 @@ final class WPOMP {
 	/*--------------------------------------------------------- */
 
 	public function optionsPages() {
-		include( dirname( __FILE__ ) . '/wpomp-options.php' );
+
+		include( dirname( __FILE__ ) . '/pages/options.php' );
 	}
 
 	public function registerSections() {
