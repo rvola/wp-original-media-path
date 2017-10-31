@@ -114,7 +114,7 @@ final class WPOMP {
 			$links,
 			sprintf(
 				'<a href="%1$s">%2$s</a>',
-				admin_url( 'admin.php?page=wpomp-options' ),
+				admin_url( 'admin.php?page=' . self::SLUG . '-options' ),
 				__( 'Settings', self::I18N )
 			)
 		);
