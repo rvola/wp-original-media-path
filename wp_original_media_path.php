@@ -24,7 +24,10 @@ Requires PHP:           5.3
 */
 
 namespace RVOLA;
-if( ! defined( 'ABSPATH' ) ) exit;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 final class WPOMP {
 
@@ -33,10 +36,6 @@ final class WPOMP {
 	const SLUG = "wpomp";
 	const VERSION = "2.1.0";
 
-	/*--------------------------------------------------------- */
-
-
-	/*--------------------------------------------------------- */
 	private static $singleton = null;
 
 	public function __construct() {
@@ -74,7 +73,6 @@ final class WPOMP {
 		}
 	}
 
-	/*--------------------------------------------------------- */
 	public static function load() {
 
 		if ( is_null( self::$singleton ) ) {
@@ -105,7 +103,6 @@ final class WPOMP {
 	public static function setPath( $url ) {
 
 		$value = self::cleanValue( $url );
-
 		if ( strpos( $value, home_url() ) !== false ) {
 			$value = str_replace( home_url(), '', $value );
 		} else {
@@ -157,7 +154,6 @@ final class WPOMP {
 		load_plugin_textdomain( self::I18N, false, dirname( __FILE__ ) . '/languages' );
 	}
 
-	/*--------------------------------------------------------- */
 	public function pluginLinkPage( $links ) {
 
 		array_unshift(
@@ -168,8 +164,10 @@ final class WPOMP {
 				__( 'Settings', self::I18N )
 			)
 		);
+
 		return $links;
 	}
+
 	public function pluginRowMeta( $links, $file ) {
 
 		if ( $file === plugin_basename( __FILE__ ) ) {
@@ -213,7 +211,6 @@ final class WPOMP {
 		);
 	}
 
-	/*--------------------------------------------------------- */
 	public function assets( $hook ) {
 
 		/*script*/
@@ -227,7 +224,6 @@ final class WPOMP {
 				'all' );
 		}
 	}
-	/*--------------------------------------------------------- */
 
 	public function optionsPages() {
 
@@ -235,6 +231,7 @@ final class WPOMP {
 	}
 
 	public function registerSections() {
+
 		add_settings_section(
 			'wpomp_section_main',
 			__( 'Uploading Files', self::I18N ),
@@ -242,7 +239,9 @@ final class WPOMP {
 			'wpomp_pages'
 		);
 	}
+
 	public function registerFields() {
+
 		register_setting(
 			'wpomp_fields',
 			'wpomp_mode'
@@ -258,14 +257,16 @@ final class WPOMP {
 			array( $this, 'autoFill' )
 		);
 	}
+
 	public function addFields() {
+
 		$fields = array(
 			'wpomp_mode'      => array(
-				'id'             => 'wpomp_mode',
-				'title'          => __( 'Expert mode', self::I18N ),
-				'description'    => __( 'Activate that if you are aware of what you are doing.', self::I18N ),
+				'id'          => 'wpomp_mode',
+				'title'       => __( 'Expert mode', self::I18N ),
 				'type'        => 'checkbox',
 				'method'      => 'checkbox',
+				'description' => __( 'Activate that if you are aware of what you are doing.', self::I18N ),
 			),
 			'upload_path'     => array(
 				'id'          => 'upload_path',
@@ -286,7 +287,7 @@ final class WPOMP {
 			),
 		);
 
-		foreach( $fields as $id => $field ){
+		foreach ( $fields as $id => $field ) {
 
 			$field_fonction = 'inputFields' . ucfirst( $field['method'] );
 
@@ -302,6 +303,7 @@ final class WPOMP {
 	}
 
 	public function inputFieldsText( $datafield ) {
+
 		printf(
 			'<input name="%1$s" type="%2$s" id="%1$s" value="%3$s" class="regular-text code" placeholder="%4$s"/>',
 			$datafield['id'],
@@ -317,6 +319,7 @@ final class WPOMP {
 	}
 
 	public function inputFieldsCheckbox( $datafield ) {
+
 		printf(
 			'<input name="%1$s" type="checkbox" id="%1$s" value="1" %2$s /> %3$s',
 			$datafield['id'],
@@ -330,6 +333,5 @@ final class WPOMP {
 	}
 
 }
-
 add_action( 'plugins_loaded', array( 'RVOLA\WPOMP', 'load' ), 10 );
 register_activation_hook( __FILE__, array( 'RVOLA\WPOMP', 'activation' ) );
