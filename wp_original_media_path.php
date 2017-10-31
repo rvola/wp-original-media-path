@@ -52,14 +52,6 @@ final class WPOMP {
 
 	/*--------------------------------------------------------- */
 
-	private static $_instance = null;
-	public static function load() {
-		if( is_null( self::$_instance ) ) {
-			$class = __CLASS__;
-			self::$_instance = new $class;
-		}
-		return self::$_instance;
-	}
 	public static function activate() {
 		$upload_path	 = get_option( 'upload_path' );
 		$upload_url_path = get_option( 'upload_url_path' );
@@ -79,6 +71,7 @@ final class WPOMP {
 	}
 
 	/*--------------------------------------------------------- */
+	private static $singleton = null;
 
 	public function __construct() {
 
@@ -116,6 +109,15 @@ final class WPOMP {
 	}
 
 	/*--------------------------------------------------------- */
+	public static function load() {
+
+		if ( is_null( self::$singleton ) ) {
+			$class           = __CLASS__;
+			self::$singleton = new $class;
+		}
+
+		return self::$singleton;
+	}
 
 	public static function loadTextDomain() {
 		load_plugin_textdomain( self::I18N, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
