@@ -2,10 +2,29 @@
 <div class="wrap">
 	<h1><?php echo self::NAME;?></h1>
 	<p>
-		<a href="https://wordpress.org/plugins/wp-original-media-path/installation/" target="_blank" class="button"><?php _e( 'How to Configure', self::I18N );?></a>
-		<a href="https://wordpress.org/plugins/wp-original-media-path/faq/" target="_blank" class="button"><?php _e( 'FAQ', self::I18N );?></a>
-		<a href="https://github.com/rvola/wp-original-media-path" target="_blank" class="button">GitHub</a>
-		<a href="https://paypal.me/rvola" target="_blank" class="button button-primary"><?php _e( 'Donate', self::I18N );?></a>
+		<?php
+
+		printf(
+			'<a href="%1$s" target="_blank" class="button">%2$s</a> ',
+			'https://wordpress.org/plugins/wp-original-media-path/faq/',
+			__( 'FAQ', self::I18N )
+		);
+		printf(
+			'<a href="%1$s" target="_blank" class="button">%2$s</a> ',
+			'https://wordpress.org/plugins/wp-original-media-path/installation/',
+			__( 'How to Configure', self::I18N )
+		);
+		printf(
+			'<a href="%1$s" target="_blank" class="button">GitHub</a> ',
+			'https://github.com/rvola/wp-original-media-path'
+		);
+		printf(
+			'<a href="%1$s" target="_blank" class="button button-primary">%2$s</a>',
+			'https://www.paypal.me/rvola',
+			__( 'Donate', self::I18N )
+		);
+
+		?>
 	</p>
 	<form method="post" action="options.php">
 		<?php
