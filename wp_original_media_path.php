@@ -60,10 +60,9 @@ final class WPOMP {
 
 		$this->check_multisite();
 
-		$plugin_file = plugin_basename( __FILE__ );
 		add_action( 'init', array( $this, 'loadLanguages' ), 10 );
 
-		add_filter( "plugin_action_links_{$plugin_file}", array( $this, 'linkPluginPage' ), 10, 1 );
+		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'pluginLinkPage' ), 10, 1 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ), 10, 1 );
 
@@ -107,8 +106,8 @@ final class WPOMP {
 	}
 
 	/*--------------------------------------------------------- */
+	public function pluginLinkPage( $links ) {
 
-	public function linkPluginPage( $links ) {
 		array_unshift(
 			$links,
 			sprintf(
