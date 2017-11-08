@@ -77,6 +77,9 @@ The GIT repository is available here [https://github.com/rvola/wp-original-media
 
 == Changelog ==
 
+= 2.3.0 | 2017-11-08 =
+* NEW / possibility in "Expert" mode to modify the url scheme for the site
+
 = 2.2.0 | 2017-10-31 =
 * Minor spaces and clean
 * Refactor activation methode with new setter

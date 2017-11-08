@@ -6,8 +6,10 @@
 		function check_mode() {
 			if ( $( '#wpomp_mode' ).is( ':checked' ) ){
 				$row.css({ 'display': 'table-row' });
+				$('#upload_url_path').attr({'type':'text'});
 			} else {
 				$row.hide();
+				$('#upload_url_path').attr({'type':'url'});
 			}
 		}
 
