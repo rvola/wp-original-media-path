@@ -124,7 +124,9 @@ final class WPOMP {
 		$value = remove_accents( $value );
 		$value = preg_replace( '/[^a-z0-9-_:\.\/]/', '', $value );
 		$value = rtrim( $value, '/\\' );
-		$value = trim( $value, '/\\' );
+		if ( get_option( 'wpomp_mode' ) != true ) {
+			$value = trim( $value, '/\\' );
+		}
 
 		return $value;
 	}
@@ -137,12 +139,12 @@ final class WPOMP {
 	public static function autoFill( $url ) {
 
 		$value = self::cleanValue( $url );
-		$value = esc_url( $value );
 
 		if ( empty( $value ) ) {
 			$value = home_url() . '/wp-content/uploads';
 		}
 		if ( get_option( 'wpomp_mode' ) != true ) {
+			$value = esc_url( $value );
 			self::setPath( $value );
 		}
 
