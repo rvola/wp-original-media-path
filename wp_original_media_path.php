@@ -5,8 +5,8 @@ Plugin URI:             https://github.com/rvola/wp-original-media-path
 
 Description:            Change the location for the uploads folder for WordPress
 
-Version:                2.2.0
-Revision:               2017-10-31
+Version:                2.3.0
+Revision:               2017-11-08
 Creation:               2013-01-06
 
 Author:                 studio RVOLA
@@ -34,7 +34,7 @@ final class WPOMP {
 	const NAME = "WP Original Media Path";
 	const I18N = "wp-original-media-path";
 	const SLUG = "wpomp";
-	const VERSION = "2.2.0";
+	const VERSION = "2.3.0";
 
 	private static $singleton = null;
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.3.0](https://github.com/rvola/wp-original-media-path/tree/2.3.0) - 2017-11-08
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.2.0...2.3.0)
+
+* NEW / possibility in "Expert" mode to modify the url scheme for the site
+
 ## [2.2.0](https://github.com/rvola/wp-original-media-path/tree/2.2.0) - 2017-10-31
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.1.1...2.2.0)
 
@@ -20,7 +25,6 @@
 * REFACTOR / change name singleton method
 * Link page options printf()
 * MOVE / page options in folder
-
 
 ## [2.1.1](https://github.com/rvola/wp-original-media-path/tree/2.1.1) - 2017-05-22
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.1.0...2.1.1)
