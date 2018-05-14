@@ -120,11 +120,11 @@ final class WPOMP {
 
 	public static function cleanValue( $value ) {
 
-		$value = strtolower( $value );
-		$value = remove_accents( $value );
-		$value = preg_replace( '/[^a-z0-9-_:\.\/]/', '', $value );
-		$value = rtrim( $value, '/\\' );
 		if ( get_option( 'wpomp_mode' ) != true ) {
+			$value = strtolower( $value );
+			$value = remove_accents( $value );
+			$value = preg_replace( '/[^a-z0-9-_:\.\/]/', '', $value );
+			$value = rtrim( $value, '/\\' );
 			$value = trim( $value, '/\\' );
 		}
 
