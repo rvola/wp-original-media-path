@@ -17,7 +17,7 @@ Follow the [installation instructions](#installation) to migrate your old images
 
 ## Requirement
 
-* PHP minimal: **5.3**
+* PHP minimal: **7.0**
 * WordPress minimal: **3.5**
 
 ## Installation
