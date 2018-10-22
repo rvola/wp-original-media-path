@@ -16,7 +16,7 @@ Text Domain:            wp-original-media-path
 Domain Path:            /languages/
 
 Requires at least:      3.5
-Tested up to:           4.9
+Tested up to:           5.0
 Requires PHP:           5.3
 
 License:		        GPLv3
