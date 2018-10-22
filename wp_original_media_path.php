@@ -5,8 +5,8 @@ Plugin URI:             https://github.com/rvola/wp-original-media-path
 
 Description:            Change the location for the uploads folder for WordPress
 
-Version:                2.3.0
-Revision:               2017-11-08
+Version:                2.4.0
+Revision:               2018-10-22
 Creation:               2013-01-06
 
 Author:                 studio RVOLA
@@ -17,7 +17,7 @@ Domain Path:            /languages/
 
 Requires at least:      3.5
 Tested up to:           5.0
-Requires PHP:           5.3
+Requires PHP:           7.0
 
 License:		        GPLv3
 License URI:	        https://www.gnu.org/licenses/gpl-3.0

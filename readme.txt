@@ -2,7 +2,7 @@
 Contributors: rvola
 Donate link: https://www.paypal.me/rvola
 Tags: media, upload, path, subdomain
-Requires PHP: 5.3
+Requires PHP: 7.0
 Requires at least: 3.5
 Tested up to: 5.0
 Stable tag: 2.3.0
