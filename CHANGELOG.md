@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/rvola/wp-original-media-path/tree/2.4.0) - 2018-10-22
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.3.0...2.4.0)
+
+* CHECK / End of support PHP 5.6
+* ✓ Check compatbility WP 5.0
+* If Expert mode, don't modify lowercase, etc
+
 ## [2.3.0](https://github.com/rvola/wp-original-media-path/tree/2.3.0) - 2017-11-08
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.2.0...2.3.0)
 

@@ -34,7 +34,7 @@ final class WPOMP {
 	const NAME = "WP Original Media Path";
 	const I18N = "wp-original-media-path";
 	const SLUG = "wpomp";
-	const VERSION = "2.3.0";
+	const VERSION = "2.4.0";
 
 	private static $singleton = null;
 
