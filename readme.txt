@@ -2,10 +2,10 @@
 Contributors: rvola
 Donate link: https://www.paypal.me/rvola
 Tags: media, upload, path, subdomain
-Requires PHP: 5.3
+Requires PHP: 7.0
 Requires at least: 3.5
-Tested up to: 4.9
-Stable tag: 2.3.0
+Tested up to: 5.0
+Stable tag: 2.4.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -76,6 +76,11 @@ We’re glad you want to help us improve the WP Original Media Path!
 The GIT repository is available here [https://github.com/rvola/wp-original-media-path](https://github.com/rvola/wp-original-media-path)
 
 == Changelog ==
+
+= 2.4.0 | 2018-10-22 =
+* CHECK / End of support PHP 5.6
+* ✓ Check compatbility WP 5.0
+* If Expert mode, don't modify lowercase, etc
 
 = 2.3.0 | 2017-11-08 =
 * NEW / possibility in "Expert" mode to modify the url scheme for the site

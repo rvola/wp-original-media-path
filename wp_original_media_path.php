@@ -5,8 +5,8 @@ Plugin URI:             https://github.com/rvola/wp-original-media-path
 
 Description:            Change the location for the uploads folder for WordPress
 
-Version:                2.3.0
-Revision:               2017-11-08
+Version:                2.4.0
+Revision:               2018-10-22
 Creation:               2013-01-06
 
 Author:                 studio RVOLA
@@ -16,8 +16,8 @@ Text Domain:            wp-original-media-path
 Domain Path:            /languages/
 
 Requires at least:      3.5
-Tested up to:           4.9
-Requires PHP:           5.3
+Tested up to:           5.0
+Requires PHP:           7.0
 
 License:		        GPLv3
 License URI:	        https://www.gnu.org/licenses/gpl-3.0
@@ -34,7 +34,7 @@ final class WPOMP {
 	const NAME = "WP Original Media Path";
 	const I18N = "wp-original-media-path";
 	const SLUG = "wpomp";
-	const VERSION = "2.3.0";
+	const VERSION = "2.4.0";
 
 	private static $singleton = null;
 
@@ -120,11 +120,11 @@ final class WPOMP {
 
 	public static function cleanValue( $value ) {
 
-		$value = strtolower( $value );
-		$value = remove_accents( $value );
-		$value = preg_replace( '/[^a-z0-9-_:\.\/]/', '', $value );
-		$value = rtrim( $value, '/\\' );
 		if ( get_option( 'wpomp_mode' ) != true ) {
+			$value = strtolower( $value );
+			$value = remove_accents( $value );
+			$value = preg_replace( '/[^a-z0-9-_:\.\/]/', '', $value );
+			$value = rtrim( $value, '/\\' );
 			$value = trim( $value, '/\\' );
 		}
 
