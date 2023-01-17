@@ -119,6 +119,7 @@ final class WPOMP {
 	}
 
 	public static function cleanValue( $value ) {
+		$value = esc_html( $value );
 
 		if ( get_option( 'wpomp_mode' ) != true ) {
 			$value = strtolower( $value );
