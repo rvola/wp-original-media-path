@@ -284,7 +284,7 @@ final class WPOMP {
 				'method'      => 'text',
 				'description' => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.',
 					self::I18N ), '<strong>' . home_url() . '</strong>' ),
-				'placeholder' => 'http://'
+				'placeholder' => 'https://'
 			),
 		);
 
