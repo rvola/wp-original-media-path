@@ -5,8 +5,8 @@ Plugin URI:             https://github.com/rvola/wp-original-media-path
 
 Description:            Change the location for the uploads folder for WordPress
 
-Version:                2.4.0
-Revision:               2021-05-06
+Version:                2.4.1
+Revision:               2023-01-23
 Creation:               2013-01-06
 
 Author:                 RVOLA
@@ -34,7 +34,7 @@ final class WPOMP {
 	const NAME = "WP Original Media Path";
 	const I18N = "wp-original-media-path";
 	const SLUG = "wpomp";
-	const VERSION = "2.4.0";
+	const VERSION = "2.4.1";
 
 	private static $singleton = null;
 
@@ -119,14 +119,13 @@ final class WPOMP {
 	}
 
 	public static function cleanValue( $value ) {
+		$value = esc_html( $value );
 
-		if ( get_option( 'wpomp_mode' ) != true ) {
-			$value = strtolower( $value );
-			$value = remove_accents( $value );
-			$value = preg_replace( '/[^a-z0-9-_:\.\/]/', '', $value );
-			$value = rtrim( $value, '/\\' );
-			$value = trim( $value, '/\\' );
-		}
+		$value = strtolower( $value );
+		$value = remove_accents( $value );
+		$value = preg_replace( '/[^a-z0-9-_:?@=#\.\/]/', '', $value );
+		$value = rtrim( $value, '/\\' );
+		$value = trim( $value, '/\\' );
 
 		return $value;
 	}
@@ -285,7 +284,7 @@ final class WPOMP {
 				'method'      => 'text',
 				'description' => sprintf( __( 'Simply specify the url for your upload folder. Be careful, if you want a domain other than %s, make sure to point the domain (DNS) to the desired folder on your current server. The plugin can not upload to any other server than this one.',
 					self::I18N ), '<strong>' . home_url() . '</strong>' ),
-				'placeholder' => 'http://'
+				'placeholder' => 'https://'
 			),
 		);
 
@@ -335,5 +334,6 @@ final class WPOMP {
 	}
 
 }
+
 add_action( 'plugins_loaded', array( 'RVOLA\WPOMP', 'load' ), 10 );
 register_activation_hook( __FILE__, array( 'RVOLA\WPOMP', 'activation' ) );

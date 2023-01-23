@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.1](https://github.com/rvola/wp-original-media-path/tree/2.4.1) - 2023-01-23
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.0...2.4.1)
+
+* Placeholder minor modification
+* Improve force to clean input regex
+* Input value improvement (thanks Rio Darmawan)
+
+
 ## [2.4.0](https://github.com/rvola/wp-original-media-path/tree/2.4.0) - 2018-10-22
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.3.0...2.4.0)
 
