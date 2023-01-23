@@ -5,7 +5,7 @@ Tags: media, upload, path, subdomain
 Requires PHP: 7.0
 Requires at least: 3.5
 Tested up to: 6.1
-Stable tag: 2.4.0
+Stable tag: 2.4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -76,6 +76,11 @@ We’re glad you want to help us improve the WP Original Media Path!
 The GIT repository is available here [https://github.com/rvola/wp-original-media-path](https://github.com/rvola/wp-original-media-path)
 
 == Changelog ==
+
+= 2.4.1 | 2023-01-13 =
+* Placeholder minor modification
+* Improve force to clean input regex
+* Input value improvement (thanks Rio Darmawan)
 
 = 2.4.0 | 2018-10-22 =
 * CHECK / End of support PHP 5.6
