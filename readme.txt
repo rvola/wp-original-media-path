@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/rvola
 Tags: media, upload, path, subdomain
 Requires PHP: 7.0
 Requires at least: 3.5
-Tested up to: 6.1
-Stable tag: 2.4.1
+Tested up to: 6.2
+Stable tag: 2.4.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -76,6 +76,10 @@ We’re glad you want to help us improve the WP Original Media Path!
 The GIT repository is available here [https://github.com/rvola/wp-original-media-path](https://github.com/rvola/wp-original-media-path)
 
 == Changelog ==
+
+= 2.4.2 | 2023-03-30 =
+* Check WP 6.2
+* Revert "Improve force to clean input regex"
 
 = 2.4.1 | 2023-01-13 =
 * Placeholder minor modification
