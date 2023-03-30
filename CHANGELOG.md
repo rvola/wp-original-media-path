@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.2](https://github.com/rvola/wp-original-media-path/tree/2.4.2) - 2023-03-30
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.1...2.4.2)
+
+* Check WP 6.2
+* Revert "Improve force to clean input regex"
+
 ## [2.4.1](https://github.com/rvola/wp-original-media-path/tree/2.4.1) - 2023-01-23
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.0...2.4.1)
 
