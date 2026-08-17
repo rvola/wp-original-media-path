@@ -17,7 +17,7 @@ Domain Path:            /languages/
 
 Requires at least:      3.5
 Tested up to:           6.9
-Requires PHP:           7.0
+Requires PHP:           7.4
 
 License:		        GPLv3
 License URI:	        https://www.gnu.org/licenses/gpl-3.0
