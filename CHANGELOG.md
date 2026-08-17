@@ -1,20 +1,29 @@
 # Changelog
 
+## [2.4.3](https://github.com/rvola/wp-original-media-path/tree/2.4.3) - 2026-08-17
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.2...2.4.3)
+
+* style: PER CS-3.0.0
+* chore: check WP 7.1
+* chore: minimal PHP 7.4
+
 ## [2.4.2](https://github.com/rvola/wp-original-media-path/tree/2.4.2) - 2023-03-30
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.1...2.4.2)
 
 * Check WP 6.2
 * Revert "Improve force to clean input regex"
 
 ## [2.4.1](https://github.com/rvola/wp-original-media-path/tree/2.4.1) - 2023-01-23
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.0...2.4.1)
 
 * Placeholder minor modification
 * Improve force to clean input regex
 * Input value improvement (thanks Rio Darmawan)
 
-
 ## [2.4.0](https://github.com/rvola/wp-original-media-path/tree/2.4.0) - 2018-10-22
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.3.0...2.4.0)
 
 * CHECK / End of support PHP 5.6
@@ -22,11 +31,13 @@
 * If Expert mode, don't modify lowercase, etc
 
 ## [2.3.0](https://github.com/rvola/wp-original-media-path/tree/2.3.0) - 2017-11-08
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.2.0...2.3.0)
 
 * NEW / possibility in "Expert" mode to modify the url scheme for the site
 
 ## [2.2.0](https://github.com/rvola/wp-original-media-path/tree/2.2.0) - 2017-10-31
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.1.1...2.2.0)
 
 * Minor spaces and clean
@@ -44,10 +55,11 @@
 * Clean licence in php file
 * REFACTOR / merge method assets (script, style)
 * REFACTOR / change name singleton method
-* Link page options printf()
+* Link page options printf ()
 * MOVE / page options in folder
 
 ## [2.1.1](https://github.com/rvola/wp-original-media-path/tree/2.1.1) - 2017-05-22
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.1.0...2.1.1)
 
 * MINOR / Explanatory text
@@ -57,6 +69,7 @@
 * Bump version Wordpress Repository
 
 ## [2.1.0](https://github.com/rvola/wp-original-media-path/tree/2.1.0) - 2017-05-21
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.0.0...2.1.0)
 
 * NEW / Donate link
@@ -69,6 +82,7 @@
 * NEW / constante SLUG
 
 ## [2.0.0](https://github.com/rvola/wp-original-media-path/tree/2.0.0) - 2017-05-17
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/1.6.1...2.0.0)
 
 * MINOR / order button options
@@ -77,12 +91,13 @@
 * MINOR / Add details for field
 * NEW / Style for hide field in page media
 * NEW / Sanitize field url
-* UPDATED / activate() with new function `clean_slash`& `set_uploadPath`
+* UPDATED / activate () with new function `clean_slash`& `set_uploadPath`
 * NEW / set_uploadPath
 * NEW / clean_slash
 * REMOVE / upload_path field
 
 ## [1.6.1](https://github.com/rvola/wp-original-media-path/tree/1.6.1) - 2016-08-01
+
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/1.6.0...1.6.1)
 
 * FIX / Install fields
