@@ -1,80 +1,39 @@
-#, fuzzy
+# This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Original Media Path 2.2.X\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-original-media-"
-"path\n"
-"POT-Creation-Date: 2017-10-31 11:04+0100\n"
+"Project-Id-Version: WP Original Media Path 2.4.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-original-media-path\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.0.3\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ..\n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"X-Poedit-SearchPath-0: .\n"
+"POT-Creation-Date: 2026-08-17T08:20:54+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wp-original-media-path\n"
 
-#: pages/options.php:10 wp_original_media_path.php:180
-msgid "FAQ"
+#. Plugin Name of the plugin
+#: wp_original_media_path.php
+msgid "WP Original Media Path"
 msgstr ""
 
-#: pages/options.php:15 wp_original_media_path.php:185
-msgid "How to Configure"
+#. Plugin URI of the plugin
+#: wp_original_media_path.php
+msgid "https://github.com/rvola/wp-original-media-path"
 msgstr ""
 
-#: pages/options.php:24 wp_original_media_path.php:190
-msgid "Donate"
+#. Description of the plugin
+#: wp_original_media_path.php
+msgid "Change the location for the uploads folder for WordPress"
 msgstr ""
 
-#: wp_original_media_path.php:64
-msgid ""
-"This plugin is not compatible with WordPress multisite. Sorry for the "
-"inconvenience."
+#. Author of the plugin
+#: wp_original_media_path.php
+msgid "RVOLA"
 msgstr ""
 
-#: wp_original_media_path.php:66
-#, php-format
-msgid "Error : %s"
-msgstr ""
-
-#: wp_original_media_path.php:164
-msgid "Settings"
-msgstr ""
-
-#: wp_original_media_path.php:237
-msgid "Uploading Files"
-msgstr ""
-
-#: wp_original_media_path.php:266
-msgid "Expert mode"
-msgstr ""
-
-#: wp_original_media_path.php:269
-msgid "Activate that if you are aware of what you are doing."
-msgstr ""
-
-#: wp_original_media_path.php:275
-msgid "Store uploads in this folder"
-msgstr ""
-
-#: wp_original_media_path.php:276
-#, php-format
-msgid "Default is %s"
-msgstr ""
-
-#: wp_original_media_path.php:281
-msgid "Full URL path to files"
-msgstr ""
-
-#: wp_original_media_path.php:284
-#, php-format
-msgid ""
-"Simply specify the url for your upload folder. Be careful, if you want a "
-"domain other than %s, make sure to point the domain (DNS) to the desired "
-"folder on your current server. The plugin can not upload to any other server "
-"than this one."
+#. Author URI of the plugin
+#: wp_original_media_path.php
+msgid "https://rvola.com"
 msgstr ""
