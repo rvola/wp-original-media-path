@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.3](https://github.com/rvola/wp-original-media-path/tree/2.4.3) - 2026-08-17
+[Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.2...2.4.3)
+
+* style: PER CS-3.0.0
+* chore: check WP 7.1
+* chore: minimal PHP 7.4
+
 ## [2.4.2](https://github.com/rvola/wp-original-media-path/tree/2.4.2) - 2023-03-30
 
 [Full Changelog](https://github.com/rvola/wp-original-media-path/compare/2.4.1...2.4.2)
