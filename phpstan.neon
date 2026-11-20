@@ -1,0 +1,14 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+
+parameters:
+    level: 8
+
+    phpVersion:
+        min: 80000
+        max: 80500
+
+    paths:
+        - class/
+        - wp_original_media_path.php
+        - uninstall.php

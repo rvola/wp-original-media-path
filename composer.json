@@ -1,0 +1,36 @@
+{
+  "name": "rvola/wp-original-media-path",
+  "description": "Change the location for the uploads folder for WordPress",
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/rvola/wp-original-media-path",
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "RVOLA",
+      "homepage": "https://rvola.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "php-stubs/wordpress-stubs": "@stable",
+    "phpcompatibility/php-compatibility": "@dev",
+    "phpstan/phpstan": "@stable",
+    "szepeviktor/phpstan-wordpress": "@stable"
+  },
+  "config": {
+    "platform": {
+      "php": "8.0"
+    },
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "pot": "wp i18n make-pot . languages/wp-original-media-path.pot --exclude=vendor",
+    "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon --memory-limit 2G",
+    "php_check": "./vendor/bin/phpcs -p ."
+  }
+}
