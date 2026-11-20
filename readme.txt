@@ -12,193 +12,83 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Change the location for the uploads folder for WordPress
 
 == Description ==
-WordPress has changed the media page, removing the two fields to define the location and the sub-field of media.
-There exists a constant wp-config.php, but it does not include sub-domains.
-Once activated, the plugin will add two values ​​in the database, you modify later.
-The plugin is not retroactive for images already uploaded.
-Follow the [installation instructions](https://wordpress.org/plugins/wp-original-media-path/installation) to migrate your old images.
 
-* **This extension is not compatible with WordPress multisite.**
-* **Thank you to try to find the solution by yourself or on the forum.**
-* **The author of the plugin is no after-sales service.**
-* **Most of the issues have already been addressed.**
+WordPress still stores the location of the uploads folder and its URL, but has hidden these two settings since version 3.5. This plugin brings them back, with safeguards.
 
-[**GitHub**](https://github.com/rvola/wp-original-media-path) | [**Donate**](https://www.paypal.me/rvola)
+Install, activate, then open **Settings > WP Original Media Path** and enter the URL you want. The folder follows.
+
+= What for? =
+
+* **Serve your media from a subdomain**, for example `https://media.example.com`.
+* **Rename the folder**, for example `https://example.com/media` instead of `wp-content/uploads`.
+* **Work locally with the production images.** On a local copy of a site, enter the production URL (`https://www.example.com/wp-content/uploads`): images show up without downloading the uploads folder.
+
+= How it works =
+
+The folder and its URL are easy to mix up: files stored in one place, looked for in another. Here you only enter the URL, and the folder follows. The settings page shows, with your own values, where the files go.
+
+* **A URL on your site's domain**: `https://example.com/media` stores files in the `media` folder at the root of your site. Nothing else to set up.
+* **Another domain or a subdomain**: it must point to the right folder of this server, shown on the settings page. `https://media.example.com` keeps the files in `wp-content/uploads`: point the subdomain to that folder. With a path (`https://cdn.example.com/media`), the `media` folder is created at the root of your site: point the domain to that root.
+* **An empty URL** brings back the WordPress default.
+* Expert mode lets you enter the folder and the URL yourself (absolute path, protocol-relative URL…).
+* Files already uploaded are never moved.
+
+On a multisite network, only super admins can change these settings, site by site. Enter URLs from the network root (`https://example.com/media`, even for `https://example.com/site-b`). WordPress adds `/sites/ID` to the folder and URL of each sub-site, so two sites never share a folder.
+
+[GitHub](https://github.com/rvola/wp-original-media-path) | [Donate](https://www.paypal.me/rvola)
 
 == Installation ==
-First of all, it is important to back up your website before using this extension. I can not be held liable if you lose content. Thank you.
 
-Here is the installation. Normally, it’s pretty simple. Just enter the URL you want for your uploads directory. Be careful if you use a domain other than your domain, pointing your domains (DNS) to the desired folder.
+1. Back up your site (files and database).
+2. Install and activate the plugin, then open **Settings > WP Original Media Path**.
+3. Enter the new URL and save.
 
-For example, if I want to have `http://media.domain.com` as my URL for my uploads folder, I need to point DNS `media.domain.com` to the root of my WordPress site.
-Another example: `http://other-domain.com/images`. I have to point my domain to the `images` folder on my WordPress server.
+= Update the existing media =
 
-The easiest way to understand how the extension works and only use your current WordPress domain at first. By default, the URL of the uploads folder of WordPress is `http://domain.com/wp-content/uploads`. Try for example to put this in the field: `http://domain.com/media`, then send an image by the usual WordPress media page and normally by magic, WordPress will create the media folder at the root of your WordPress And upload your image to your server.
+The plugin changes where new files go. Media already uploaded keep their old URL in your content, so on a site that already has media:
 
-If your website is blank, you do not have anything else to do. If your site already has images for a while, read on.
+1. Move the content of the old folder to the new one, shown under the field ("File on this server").
+2. Replace the old URL with the new one in the database. With WP-CLI, preview first, then run:
 
-Please note that the URL change is never retroactive. This means that if you change the URL of the media folder, the images called in your article, etc. will still call the old URL. Similarly, templates and extensions that use dynamic functions will call the new URL while the items in the uploads folder will still be in the old folder.
+`wp search-replace 'https://example.com/wp-content/uploads' 'https://example.com/media' --dry-run`
+`wp search-replace 'https://example.com/wp-content/uploads' 'https://example.com/media'`
 
-The easiest if you want to migrate the URL is to do it in 3 simple steps:
-
-= Step 1 =
-Change the field with the new URL.
-
-= Step 2 =
-Move the contents of your old uploads folder to the location of the new URL. For example, my old folder URL is `http://domain.com/wp-content/uploads` and I now want the images to be `http://domain.com/media`; After changing the field in the options like this: `http://domain.com/media`, I move the contents of the `http://domain.com/wp-content/uploads` folder to the `http://domain.com/media`, so I allow dynamic functions to continue to find the media files in your new folder.
-
-= Step 3 =
-Now we need to change, the old image calls `http://domain.com/wp-content/uploads/2016/05/test.jpg` for example that is in the content of WordPress articles. First you have to back up your database, because the operation can be damaging and I can not be held responsible. It is necessary to modify in SQL by a simple Search> Replace.
-There are extensions on WordPress that do the job very well, I think, especially at [Search & Replace](https://wordpress.org/plugins/search-and-replace/).
-Just search for `http://domain.com/wp-content/uploads` and replace it with `http://domain.com/media` which matches the field you entered in step 1.
-
-Normally if you scrupulously follow these steps, you are able to be able to simply change the URL of your uploads folder.
-
-Good continuation and think about adding a review.
+WP-CLI also updates serialized data (widgets, page builders). On a multisite network, add `--network`.
 
 == Frequently Asked Questions ==
 
-= The plugin does it work with a real CDN? =
-Unfortunately not. Because WordPress is able to handle the file uploads directly.
-This plugin is only used to mount a mirror subdomains on Wordpress installation or change the location of file uploads.
+= Does it work with a CDN? =
 
-= I just set the plugin, but the images are not displayed =
-1. Check that the path is correct specify.
-2. Check that the file was created on the server with the chmod 777 or 755.
+Yes with a "pull" CDN, which copies the files from your site: enter the CDN URL. No with a storage service (Amazon S3…) that files must be sent to: WordPress always stores uploads on this server.
+
+= Images do not display =
+
+Under the field, the example shows the URL of an image and its file on this server: that URL must open that file. Check that the folder is writable and, for another domain, that it points to the folder shown on the page.
+
+= On a local copy, my new uploads do not display =
+
+That is expected when the URL points to production: files uploaded locally are stored locally.
 
 = My site is broken =
-1. Do not panic!
-2. Refer to the help for configuring media fields.
-3. You can always follow the uninstallation procedure if you want to reverse.
 
-= I want to make suggestions =
-We’re glad you want to help us improve the WP Original Media Path!
-The GIT repository is available here [https://github.com/rvola/wp-original-media-path](https://github.com/rvola/wp-original-media-path)
+Empty the URL field and save: WordPress uses its default folder again.
+
+= Can I use WP-CLI? =
+
+Yes, with the core options: `wp option update upload_url_path 'https://media.example.com'` and `wp option update upload_path 'wp-content/uploads'`. The values are then used as they are, as in expert mode.
+
+= What happens when I deactivate or uninstall the plugin? =
+
+Deactivating keeps your settings: WordPress keeps using them. Uninstalling brings back the WordPress default, on every site of a network. Files are never moved.
 
 == Changelog ==
+
+= 2.4.3 | 2026-08-17 =
+* Check WP 7.1
+* Minimal PHP 7.4
 
 = 2.4.2 | 2023-03-30 =
 * Check WP 6.2
 * Revert "Improve force to clean input regex"
 
-= 2.4.1 | 2023-01-13 =
-* Placeholder minor modification
-* Improve force to clean input regex
-* Input value improvement (thanks Rio Darmawan)
-
-= 2.4.0 | 2018-10-22 =
-* CHECK / End of support PHP 5.6
-* ✓ Check compatbility WP 5.0
-* If Expert mode, don't modify lowercase, etc
-
-= 2.3.0 | 2017-11-08 =
-* NEW / possibility in "Expert" mode to modify the url scheme for the site
-
-= 2.2.0 | 2017-10-31 =
-* Minor spaces and clean
-* Refactor activation methode with new setter
-* Refactor method set value
-* Refactor slug link admin options
-* Refactor Pear conventions checkMultisite
-* Refactor link plugin meta
-* Rename method linkSidebar  > addMenu
-* Rename method linkPluginPage  > pluginLinkPage
-* Rename method loadTextDomain > loadLanguages
-* Refactor Fields
-* New namespace for class
-* New requirement version (PHP, WP)
-* Clean licence in php file
-* REFACTOR / merge method assets (script, style)
-* REFACTOR / change name singleton method
-* Link page options printf()
-* MOVE / page options in folder
-
-= 2.1.1 | 2017-05-22 =
-* MINOR / Explanatory text
-* FIX / Load correctly gettext
-* FIX / Link donate + I18n
-* MINOR / changelog for Wordpress repository
-* Bump version Wordpress Repository
-
-= 2.1.0 | 2017-05-21 =
-* NEW / Donate link
-* MINOR / ajustement readme
-* UPDATED / sanitize_url if empty field
-* NEW / Expert mode with path custom
-* UPDATED / function dynamic field render
-* NEW / style in css file
-* NEW / constante Version
-* NEW / constante SLUG
-
-= 2.0.0 | 2017-05-17 =
-* MINOR / order button options
-* NEW / Check multisite and kick out
-* MINOR / Pear conventions
-* MINOR / Add details for field
-* NEW / Style for hide field in page media
-* NEW / Sanitize field url
-* UPDATED / activate() with new function `clean_slash`& `set_uploadPath`
-* NEW / set_uploadPath
-* NEW / clean_slash
-* REMOVE / upload_path field
-
-= 1.6.1 | 2016-08-01 =
-* FIX / Install fields
-
-= 1.6.0 | 2016-07-21 =
-* NEW / Changelog GitHub
-* UPDATED / readme GitHub
-* MINOR / space
-* MINOR / Update variable name
-* UPDATED / i18n
-* UPDATED / const NAME
-* UPDATED / Pear conventions
-* UPDATED / Activate function
-* UPDATED / Class become final class
-* MINOR / deleted comments
-* NEW / Licence GPL V3
-* Readme Markdown
-* Update Readme
-
-= 1.5.1 | 2015-11-19 =
-* Check Wordpress 4.4
-* Update readme
-* New File POT
-* Github link
-
-= 1.5.0 | 2015-08-28 =
-* Settings API
-* uninstall.php file
-* recode
-
-= 1.4.1 | 2014-09-22 =
-* German Translation by <a href="http://www.feuerwehrmuseum-sh.de" rel="nofollow" target="_blank">Dr. Hajo Brandenburg - Feuerwehrmuseum</a>
-
-= 1.4.0 | 2014-09-03 =
-* Correct classname responsive
-* Check compatibility WordPress 4.0
-* Update readme
-* Update assets Repository
-* Update and clean files PO & MO
-
-= 1.3.0 | 2013-07-18 =
-* Page options
-* Possibility to disable the plugin settings without deleting
-* Established translations
-* Update Installation and FAQ
-
-= 1.2.0 | 2013-05-01 =
-* Bug link setting
-* uninstalling the plugin with the deactivation
-* Update FAQ
-
-= 1.1.0 | 2013-03-29 =
-* FAQ
-* Auto fill fields
-
-= 1.0.1. | 2013-01-06 =
-* Contributors list
-* Text fields
-
-= 1.0.0. | 2012-12-28 =
-* Launch Plugin
+[Full changelog](https://github.com/rvola/wp-original-media-path/blob/main/CHANGELOG.md)
