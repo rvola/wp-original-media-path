@@ -6,7 +6,7 @@ Requires PHP: 7.4
 Requires at least: 3.5
 Stable tag: 2.4.3
 Tested up to: 7.1
-License: GPLv3
+License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Change the location for the uploads folder for WordPress

@@ -3,7 +3,7 @@
   "description": "Change the location for the uploads folder for WordPress",
   "type": "wordpress-plugin",
   "homepage": "https://github.com/rvola/wp-original-media-path",
-  "license": "GPL-3.0-only",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "RVOLA",

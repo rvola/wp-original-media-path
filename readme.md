@@ -21,4 +21,4 @@ composer run pot         # Translation template (WP-CLI)
 
 ## License
 
-GPLv3, see [LICENSE.txt](LICENSE.txt). [Donate](https://www.paypal.me/rvola)
+GPLv3 or later, see [LICENSE.txt](LICENSE.txt). [Donate](https://www.paypal.me/rvola)
