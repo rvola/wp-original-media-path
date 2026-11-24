@@ -15,9 +15,9 @@ Author URI:             https://rvola.com
 Text Domain:            wp-original-media-path
 Domain Path:            /languages/
 
-Requires at least:      3.5
 Tested up to:           7.1
-Requires PHP:           7.4
+Requires at least:      5.9
+Requires PHP:           8.0
 
 License:		        GPLv3-or-later
 License URI:	        https://www.gnu.org/licenses/gpl-3.0
