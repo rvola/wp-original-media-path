@@ -10,6 +10,12 @@
       "homepage": "https://rvola.com"
     }
   ],
+  "funding": [
+    {
+      "type": "custom",
+      "url": "https://www.paypal.me/rvola"
+    }
+  ],
   "require": {
     "php": ">=8.0"
   },
