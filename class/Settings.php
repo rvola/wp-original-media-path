@@ -24,26 +24,26 @@ final class Settings
      * Printed inline on Settings > Media and on the plugin page: no file, no cache to bust.
      */
     private const STYLE = <<<'CSS'
-        /* Settings > Media: the upload fields are edited on the plugin page (see lockMediaFields). */
-        .options-media-php .form-table tr:has(#upload_path),
-        .options-media-php .form-table tr:has(#upload_url_path) {
-            display: none;
-        }
-        /* Plugin page: the folder is only entered in expert mode, shown as soon as it is checked. */
-        .form-table:has(#wpomp_mode:not(:checked)) tr:has(#upload_path) {
-            display: none;
-        }
-        input.wpomp-text {
-            min-width: 40rem;
-        }
-        /* Mobile (core forms breakpoint): the field takes the screen width instead. */
-        @media (width <= 782px) {
-            input.wpomp-text {
-                min-width: 0;
-                width: 100%;
-            }
-        }
-        CSS;
+                      /* Settings > Media: the upload fields are edited on the plugin page (see lockMediaFields). */
+                      .options-media-php .form-table tr:has(#upload_path),
+                      .options-media-php .form-table tr:has(#upload_url_path) {
+                          display: none;
+                      }
+                      /* Plugin page: the folder is only entered in expert mode, shown as soon as it is checked. */
+                      .form-table:has(#wpomp_mode:not(:checked)) tr:has(#upload_path) {
+                          display: none;
+                      }
+                      input.wpomp-text {
+                          min-width: 40rem;
+                      }
+                      /* Mobile (core forms breakpoint): the field takes the screen width instead. */
+                      @media (width <= 782px) {
+                          input.wpomp-text {
+                              min-width: 0;
+                              width: 100%;
+                          }
+                      }
+                      CSS;
 
     /**
      * @var string|false Hook suffix of the plugin page, false until it is added.
@@ -82,7 +82,10 @@ final class Settings
         }
 
         wp_die(
-            esc_html__('This plugin does not work on networks that still use the ms-files.php rewriting (created before WordPress 3.5).', 'wp-original-media-path'),
+            esc_html__(
+                'This plugin does not work on networks that still use the ms-files.php rewriting (created before WordPress 3.5).',
+                'wp-original-media-path',
+            ),
             esc_html(self::NAME),
             ['back_link' => true],
         );
@@ -225,7 +228,10 @@ final class Settings
     public function renderSectionIntro(): void
     {
         ?>
-        <p><?= esc_html__('Changing these settings does not move the files already uploaded.', 'wp-original-media-path') ?></p>
+        <p><?= esc_html__(
+                'Changing these settings does not move the files already uploaded.',
+                'wp-original-media-path',
+            ) ?></p>
         <?php
     }
 
@@ -252,7 +258,7 @@ final class Settings
      *
      * @param string $basedir Current uploads folder.
      * @param string $baseurl Current uploads URL.
-     * @param string $subdir  Current year/month sub-folder, empty when disabled.
+     * @param string $subdir Current year/month sub-folder, empty when disabled.
      *
      * @return void
      */
@@ -276,29 +282,32 @@ final class Settings
             ?>
         </p>
         <?php if (!UploadPath::isSiteHost($baseurl)) : ?>
-            <p class="description">
-                <strong>
-                    <?php
-                    $domain = $this->code((string) wp_parse_url($baseurl, PHP_URL_HOST));
+        <p class="description">
+            <strong>
+                <?php
+                $domain = $this->code((string) wp_parse_url($baseurl, PHP_URL_HOST));
 
-                    if ($domainRoot === '') {
-                        printf(
-                            /* translators: %s: domain of the uploads URL. */
-                            esc_html__('%s must point to this server, so that this URL serves this file.', 'wp-original-media-path'),
-                            $domain,
-                        );
-                    } else {
-                        printf(
-                            /* translators: 1: domain of the uploads URL, 2: folder on this server. */
-                            esc_html__('%1$s must point to the %2$s folder of this server.', 'wp-original-media-path'),
-                            $domain,
-                            $this->code($domainRoot),
-                        );
-                    }
-                    ?>
-                </strong>
-            </p>
-        <?php endif; ?>
+                if ($domainRoot === '') {
+                    printf(
+                    /* translators: %s: domain of the uploads URL. */
+                        esc_html__(
+                            '%s must point to this server, so that this URL serves this file.',
+                            'wp-original-media-path',
+                        ),
+                        $domain,
+                    );
+                } else {
+                    printf(
+                    /* translators: 1: domain of the uploads URL, 2: folder on this server. */
+                        esc_html__('%1$s must point to the %2$s folder of this server.', 'wp-original-media-path'),
+                        $domain,
+                        $this->code($domainRoot),
+                    );
+                }
+                ?>
+            </strong>
+        </p>
+    <?php endif; ?>
         <?php
     }
 
@@ -344,7 +353,8 @@ final class Settings
         ?>
         <input name="<?= esc_attr(UploadPath::PATH_OPTION) ?>" id="<?= esc_attr(UploadPath::PATH_OPTION) ?>" type="text"
                value="<?= esc_attr((string) get_option(UploadPath::PATH_OPTION)) ?>"
-               placeholder="<?= esc_attr(UploadPath::fromAbspath(UploadPath::defaultFolder())) ?>" class="regular-text code">
+               placeholder="<?= esc_attr(UploadPath::fromAbspath(UploadPath::defaultFolder())) ?>"
+               class="regular-text code">
         <p class="description">
             <?= esc_html__('Relative to the WordPress folder, or absolute.', 'wp-original-media-path') ?>
         </p>
@@ -357,10 +367,14 @@ final class Settings
     public function renderModeField(): void
     {
         ?>
-        <input name="<?= esc_attr(UploadPath::MODE_OPTION) ?>" id="<?= esc_attr(UploadPath::MODE_OPTION) ?>" type="checkbox"
+        <input name="<?= esc_attr(UploadPath::MODE_OPTION) ?>" id="<?= esc_attr(UploadPath::MODE_OPTION) ?>"
+               type="checkbox"
                value="1" <?php checked(UploadPath::isExpert()); ?>>
         <span class="description">
-            <?= esc_html__('Enter the folder yourself, and keep the URL as typed (no automatic cleaning).', 'wp-original-media-path') ?>
+            <?= esc_html__(
+                'Enter the folder yourself, and keep the URL as typed (no automatic cleaning).',
+                'wp-original-media-path',
+            ) ?>
         </span>
         <?php
     }
@@ -375,11 +389,14 @@ final class Settings
     public function addSettingsLink(array $links): array
     {
         if (current_user_can(UploadPath::capability())) {
-            array_unshift($links, sprintf(
-                '<a href="%1$s">%2$s</a>',
-                menu_page_url(self::SLUG, false),
-                esc_html__('Settings', 'wp-original-media-path'),
-            ));
+            array_unshift(
+                $links,
+                sprintf(
+                    '<a href="%1$s">%2$s</a>',
+                    menu_page_url(self::SLUG, false),
+                    esc_html__('Settings', 'wp-original-media-path'),
+                ),
+            );
         }
 
         return $links;
@@ -389,7 +406,7 @@ final class Settings
      * Adds the help links under the plugin description.
      *
      * @param string[] $links Plugin row meta.
-     * @param string   $file  Plugin file of the row.
+     * @param string $file Plugin file of the row.
      *
      * @return string[]
      */
@@ -415,7 +432,10 @@ final class Settings
     {
         return [
             esc_html__('FAQ', 'wp-original-media-path') => 'https://wordpress.org/plugins/wp-original-media-path/faq/',
-            esc_html__('How to Configure', 'wp-original-media-path') => 'https://wordpress.org/plugins/wp-original-media-path/installation/',
+            esc_html__(
+                'How to Configure',
+                'wp-original-media-path',
+            ) => 'https://wordpress.org/plugins/wp-original-media-path/installation/',
             esc_html__('Donate', 'wp-original-media-path') => 'https://www.paypal.me/rvola',
         ];
     }

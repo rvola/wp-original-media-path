@@ -2,7 +2,8 @@
 
 Change the location for the uploads folder for WordPress.
 
-WordPress still stores the location of the uploads folder and its URL, but has hidden these two settings since version 3.5. This plugin brings them back, with safeguards: install, activate, enter the URL in **Settings > WP Original Media Path**.
+WordPress still stores the location of the uploads folder and its URL, but has hidden these two settings since version 3.5. This plugin brings them
+back, with safeguards: install, activate, enter the URL in **Settings > WP Original Media Path**.
 
 - Serve your media from a subdomain (`https://media.example.com`).
 - Rename the folder (`https://example.com/media`).
