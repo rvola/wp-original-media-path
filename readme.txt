@@ -83,12 +83,4 @@ Deactivating keeps your settings: WordPress keeps using them. Uninstalling bring
 
 == Changelog ==
 
-= 2.4.3 | 2026-08-17 =
-* Check WP 7.1
-* Minimal PHP 7.4
-
-= 2.4.2 | 2023-03-30 =
-* Check WP 6.2
-* Revert "Improve force to clean input regex"
-
-[Full changelog](https://github.com/rvola/wp-original-media-path/blob/main/CHANGELOG.md)
+[All releases on GitHub](https://github.com/rvola/wp-original-media-path/releases)
