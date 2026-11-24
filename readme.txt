@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/rvola
 Tags: media, upload, path, subdomain
 Requires PHP: 8.0
 Requires at least: 5.9
-Stable tag: 2.4.3
+Stable tag: 3.0.0
 Tested up to: 7.2
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -82,5 +82,15 @@ Yes, with the core options: `wp option update upload_url_path 'https://media.exa
 Deactivating keeps your settings: WordPress keeps using them. Uninstalling brings back the WordPress default, on every site of a network. Files are never moved.
 
 == Changelog ==
+
+= 3.0.0 =
+* Multisite support, for super admins only.
+* Works with Composer-based installs, WordPress in its own folder and a custom content folder: nothing assumes `wp-content` anymore.
+* The settings page shows where an uploaded image goes: its URL and its file on the server.
+* Expert mode without JavaScript.
+* Safer URL and folder cleaning.
+* The upload fields of Settings > Media can only be changed on this page.
+* Uninstalling brings back the WordPress default.
+* Requires PHP 8.0 and WordPress 5.9.
 
 [All releases on GitHub](https://github.com/rvola/wp-original-media-path/releases)
