@@ -5,7 +5,7 @@ Tags: media, upload, path, subdomain
 Requires PHP: 8.0
 Requires at least: 5.9
 Stable tag: 2.4.3
-Tested up to: 7.1
+Tested up to: 7.2
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
