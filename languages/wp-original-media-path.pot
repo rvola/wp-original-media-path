@@ -1,14 +1,15 @@
-# This file is distributed under the GPLv3.
+# Copyright (C) 2026 RVOLA
+# This file is distributed under the GPLv3-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Original Media Path 2.4.3\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-original-media-path\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-original-media-path-v3\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-17T08:20:54+00:00\n"
+"POT-Creation-Date: 2026-11-24T14:41:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wp-original-media-path\n"
@@ -36,4 +37,88 @@ msgstr ""
 #. Author URI of the plugin
 #: wp_original_media_path.php
 msgid "https://rvola.com"
+msgstr ""
+
+#: class/Settings.php:85
+msgid "This plugin does not work on networks that still use the ms-files.php rewriting (created before WordPress 3.5)."
+msgstr ""
+
+#: class/Settings.php:128
+msgid "Uploading Files"
+msgstr ""
+
+#: class/Settings.php:135
+msgid "Full URL path to files"
+msgstr ""
+
+#: class/Settings.php:143
+msgid "Expert mode"
+msgstr ""
+
+#: class/Settings.php:151
+msgid "Store uploads in this folder"
+msgstr ""
+
+#: class/Settings.php:228
+msgid "Changing these settings does not move the files already uploaded."
+msgstr ""
+
+#: class/Settings.php:243
+msgid "Leave empty to use the WordPress default."
+msgstr ""
+
+#: class/Settings.php:266
+msgid "With the current settings, an image uploaded today:"
+msgstr ""
+
+#. translators: %s: URL of an example image.
+#: class/Settings.php:270
+#, php-format
+msgid "URL: %s"
+msgstr ""
+
+#. translators: %s: server path of an example image.
+#: class/Settings.php:275
+#, php-format
+msgid "File on this server: %s"
+msgstr ""
+
+#. translators: %s: domain of the uploads URL.
+#: class/Settings.php:287
+#, php-format
+msgid "%s must point to this server, so that this URL serves this file."
+msgstr ""
+
+#. translators: 1: domain of the uploads URL, 2: folder on this server.
+#: class/Settings.php:293
+#, php-format
+msgid "%1$s must point to the %2$s folder of this server."
+msgstr ""
+
+#: class/Settings.php:349
+msgid "Relative to the WordPress folder, or absolute."
+msgstr ""
+
+#: class/Settings.php:363
+msgid "Enter the folder yourself, and keep the URL as typed (no automatic cleaning)."
+msgstr ""
+
+#: class/Settings.php:381
+msgid "Settings"
+msgstr ""
+
+#: class/Settings.php:417
+msgid "FAQ"
+msgstr ""
+
+#: class/Settings.php:418
+msgid "How to Configure"
+msgstr ""
+
+#: class/Settings.php:419
+msgid "Donate"
+msgstr ""
+
+#: class/UploadPath.php:91
+msgid "Enter a full URL, starting with https://"
 msgstr ""
